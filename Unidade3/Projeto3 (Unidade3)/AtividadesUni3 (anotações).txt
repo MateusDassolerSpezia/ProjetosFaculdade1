@@ -1,0 +1,419 @@
+								Uni3Exe01
+
+
+Análise:
+falta a medida (sera considerado em metros)
+
+Entradas:
+dimensões - largura e comprimento
+
+Saída: 
+Área em m²
+
+Testes:
+T1)
+Largura = 10
+Comprimento = 7
+Área = 70m²
+
+T2)
+Largura = 100
+Comprimento = 50
+Área = 5000m²
+
+T3)
+Largura = 10,5
+Comprimento = 50
+Área = 525m²
+
+Algorítmo:
+ler (largura)
+ler (comprimento)
+largura * comprimento = area
+ecrever (area)
+
+
+								Uni3Exe02
+
+Análise:
+ok
+
+Entradas:
+valor do sapato
+
+Saída:
+desconto e valor final com o desconto
+
+Testes:
+T1)
+100 * (12 / 100) = 10
+100 - 10 = 90
+
+T2)
+80 * (12 / 100) = 12
+80 - 12 = 68
+
+T3) 
+50,5 * (12 / 100) = 10,1
+50,5 - 10,1 = 40,4
+
+Algoritmo:
+ler valor do sapato
+desconto = (valorSapato * (12/100)
+valorFinal = valorSapato - desconto
+escrever o valor do desconto
+escrever valorFinal
+
+
+
+								Uni3Exe03
+
+Análise:
+ok
+
+Entradas:
+preço do litro da gasolina, valor do pagamento
+
+Saída:
+quantos litros ele conseguiu colocar no tanque
+
+Testes:
+T1) 
+valorLitro = 5
+valorPagamento = 100
+100 / 5 = 20
+
+T2)
+valorLitro = 5,2
+valorPagamento = 100
+100 / 5,2 = 19,2
+
+T3)
+valorLitro = 5,1
+valorPagamento = 250
+250 / 5,1 = 49
+
+Algoritmo:
+ler (valorLitro)
+ler (valorPagamento)
+quantidadeLitros = valorPagamento/litroGasolina
+ecrever (litrosTanque)
+
+
+								Uni3Exe04
+
+Análise:
+ok
+
+Entrada:
+3 notas de um aluno
+
+Saída:
+média ponderada
+
+Testes:
+T1) (7 * 5 + 8 * 3 + 9 * 2) / 10 = 7,7
+
+T2) (8,5 * 5 + 6 * 3 + 5 * 2) / 10 = 7,05
+
+T3) (7,3 * 5 + 8,6 * 3 + 7,8 * 2) / 10 = 7,79
+
+Algoritmo:
+ler (nota1, nota2, nota3)
+media = nota1*5 + nota2*3 + nota3*2 / 10 
+escrever (media)
+
+
+									Uni3Exe05
+
+Análise:
+ok
+
+Entradas:
+quantidade de frangos
+
+Saída:
+gasto total para marcar todos os frangos
+
+Testes:
+T1) 5 * 4 + 10 * 3,50 = R$55,00
+
+T2) 10 * 4 + 20 * 3,50 = R$110,00
+
+T3) 50 * 4 + 100 * 3,50 = R$550,00
+
+Algoritmo:
+ler (quantidade de frangos)
+aneisAlimentacao = quantidade frangos * 2
+precoPagar = anelShip * 4 + aneisAlimentacao * 3,50
+escrever (precoPagar)
+
+
+									Uni3Exe06
+
+Análise:
+ok
+
+Entradas:
+peso do prato montado pelo cliente (em kg)
+
+Saída:
+valor a pagar
+
+Algoritmo:
+ler (peso do prato montado pelo cliente)
+valorPagar = (pesoPratoMontado - 0,75) * 25
+escrever (valorPagar)
+
+Testes:
+T1) (1,75 - 0,75) * 25 = R$25,00
+T2) (2,5 - 0,75) *25 = R$43,75
+T3) (1 - 0,75) * 25 = R$6,25
+
+
+									Uni3Exe07
+
+Análise:
+ok
+
+Entradas:
+quntidade de latas, garrafinhas, garrafas
+
+Saída:
+litros de refrigerante comprados
+
+Algoritmo:
+ler (quantidadeLatas)
+ler (quantidadeGarrafas600)
+ler (quantidadeGarrafas2000)
+litrosComprados = quantidadeLatas * 0,35 + quantidadeGarrafas600 * 0,6 + quantidadeGarrafas2000 * 2
+escrever (litrosComprados)
+
+Testes:
+T1) 5 * 0,35 + 3 * 0,6 + 1 * 2 = 
+
+T2) 8 * 0,35 + 5 * 0,6 + 3 * 2 =
+
+T3) 12 * 0,35 + 8 * 0,6 + 5 * 2 = 
+
+
+
+									Uni3Exe08	
+
+Análise:
+ok
+
+Entradas:
+valor em dólares
+
+Saída:
+valor em reais
+
+Algoritmo:
+ler (valorDolar)
+valorReal = valorDolar * 4,97
+escrever (valorReal)
+
+Testes:
+T1) 25 * 4,97 = US$124,25
+
+T2) 50,5 * 4,97 = US$250,985
+
+T3) 125,25 * 4,97 = US$622,4925
+
+
+									Uni3Exe09
+
+Análise:
+faltou indicar a medida a ser utilizada 
+
+Entradas:
+raio, altura
+
+Saída:			
+volume da lata de óleo		
+
+Algoritmo:
+ler (raio)
+ler (altura)
+volumeLata = Pi * (raio * raio) * altura
+escrever (volumeLata)
+
+Testes:
+T1) 3,14 * (4 * 4) * 5 = 251,2cm³
+
+T2) 3,14 * (5 * 5) * 8,5 = 667,25cm³
+
+T3) 3,14 * (3,5 * 3,5) * 9,5 = 365,41cm³
+
+
+
+
+									Uni3Exe10
+
+Análise:
+ok
+
+Entradas:
+cateto1, cateto2
+
+Saída:
+hipotenusa
+
+Algoritmo:
+ler (cateto1)
+ler (cateto2)
+hipotenusa = cateto1² + cateto2²
+
+Testes:
+T1) 
+
+T2)
+
+T3)
+							
+
+
+									Uni3Exe11
+
+Análise:
+ok
+
+Entradas:
+temperatura em °C
+
+Saída: 
+temperatura em °F
+
+Algoritmo:
+ler (temperaturaC)
+temperaturaF = 1,8 * temperaturaC + 32
+escrever (temperaturaF)
+
+Testes:
+T1) 1,8 * 24 + 32 = 75,2
+
+T2) 1,8 * 28 + 32 = 82,4
+
+T3) 1,8 * 32 + 32 = 89,6
+
+
+									Uni3Exe12
+
+Análise:
+ok
+
+Entradas:
+nome do funcionário, o número de horas trabalhadas mensais e o número de dependentes
+
+Saída:
+nome, o salário bruto e o salário líquido do funcionário
+
+Algoritmo:
+ler (nome)
+ler (horasTrabalhadas)
+ler (numeroDependentes)
+salarioBruto = horasTrabalhadas * 10 + numeroDependentes * 60
+salarioLiquido = salarioBruto - salarioBruto * (13,5 / 100)
+escrever (salarioBruto)
+escrever (salarioLiquido)
+
+Testes:
+T1) 100 * 10 + 3 * 60 = R$1180,00
+1180 - 1180 * (13,5 / 100) = R$1020,70
+
+T2) 140 * 10 + 2 * 60 = R$1520,00
+1520 - 1520 * (13,5 / 100) = R$1314,8
+
+T3) 160 * 10 + 1 * 60 = R$1660,00
+1660 - 1660 * (13,5 / 100) = R$1435,90
+
+
+									Uni3Exe13
+
+Análise:
+ok
+
+Entradas:
+azulejo, comprimento e alura da parede (em metros)
+
+Saída:
+valor gasto com a compra de azulejos
+
+Algoritmo:
+ler (comprimento)
+ler (altura)
+areaParede = comprimento * altura
+valorGasto = 12,5 * (areaParede * 9)
+escrever (valorGasto)
+
+Testes:
+T1) 15 * 4 = 60m²
+12,5 * (60 * 9) = R$6.750,00
+
+T2) 20 * 3,5 = 70
+12,5 * (70 * 9) = R$7.875,00
+
+T3) 25,5 * 3,5 = 89,25
+12,5 * (89,25 * 9) = R$10.040.62
+
+
+									Uni3Exe14
+
+Análise:
+faltou indicar a medida
+
+Entradas:
+distância percorrida, tempo gasto na viagem
+
+Saída:
+velocidade média, combustível gasto
+
+Algoritmo:
+ler (distanciaPercorrida)
+ler (tempoGasto)
+velocidadeMedia = distanciaPercorrida / tempoGasto
+combustivelGasto = distanciaPercorrida / 12
+escrever (velocidadeMedia)
+escrever (combustivelGasto)
+
+Testes:
+T1)
+
+T2)
+
+T3)
+
+
+									Uni3Exe15
+
+Análise: 
+ok
+
+Entradas:
+número inteiro até 3 digitos
+
+Saída:
+X centena(s) Y dezena(s) K unidade(s)  
+
+Algoritmo:
+ler (numero)
+
+
+
+									Uni3Exe16
+
+Análise:
+ok
+
+Entradas:
+valor da compra
+
+Saída:
+número mínimo de notas que o caixa deve fornecer como troco, número de cada tipo de nota a ser fornecido como troco
+
+Algoritmo:
+ler (valorCompra)
+
+
+
