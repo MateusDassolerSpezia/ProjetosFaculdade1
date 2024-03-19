@@ -17,5 +17,5 @@ public class Exe11Uri {
     public static void main(String[] args) {
         new Exe11Uri();
     }
-    
+
 }
