@@ -20,6 +20,6 @@ public class Exe5 {
 
     }
     public static void main(String[] args) {
-        new Exe5();
+        new Exe5Uni2();
     }
 }

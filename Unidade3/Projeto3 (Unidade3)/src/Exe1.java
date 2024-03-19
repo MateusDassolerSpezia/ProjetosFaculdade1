@@ -24,6 +24,6 @@ public class Exe1 {
 
 
     public static void main(String[] args) {
-        new Exe1Uri();
+        new Exe1Uni1();
     }
 }

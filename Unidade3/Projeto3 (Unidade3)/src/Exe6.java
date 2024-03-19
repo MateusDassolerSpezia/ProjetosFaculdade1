@@ -16,6 +16,6 @@ public class Exe6 {
         sc.close();
     }
     public static void main(String[] args) {
-        new Exe6();
+        new Exe6Uni2();
     }
 }

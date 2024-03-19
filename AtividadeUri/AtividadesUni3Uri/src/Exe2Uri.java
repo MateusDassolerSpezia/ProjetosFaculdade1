@@ -12,7 +12,7 @@ public class Exe2Uri {
 
         double area = π * (raio * raio);
         DecimalFormat df = new DecimalFormat("0.0000");
-        System.out.print("A = " + df.format(area));
+        System.out.println("A = " + df.format(area));
 
 
         sc.close();
