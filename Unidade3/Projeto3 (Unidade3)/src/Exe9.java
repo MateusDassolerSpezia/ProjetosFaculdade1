@@ -5,10 +5,10 @@ public class Exe9 {
     public Exe9() {
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Digite o raio da lata: ");
+        System.out.print("Digite o raio da lata (em metros): ");
         float raioLata = sc.nextFloat();
 
-        System.out.print("Digite a altura da lata: ");
+        System.out.print("Digite a altura da lata (em metros): ");
         float alturaLata = sc.nextFloat();
 
         float PI = 3.14f;

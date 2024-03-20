@@ -8,8 +8,10 @@ public class Exe15Uni3 {
         int numero = sc.nextInt();
 
         int x = numero / 100;
-        int y = ((numero/10)%10);
-        int k = (numero%10);
+        numero = numero % 100;
+        int y = numero / 10;
+        numero = numero % 10;
+        int k = numero / 1;
 
         System.out.println(x + " centena(s)");
         System.out.println(y + " dezena(s)");

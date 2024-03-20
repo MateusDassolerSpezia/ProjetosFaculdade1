@@ -227,7 +227,7 @@ T3) 125,25 * 4,97 = US$622,4925
 									Uni3Exe09
 
 Análise:
-faltou indicar a medida a ser utilizada 
+faltou a medida (será considerado em metros)
 
 Entradas:
 raio, altura
@@ -294,11 +294,16 @@ temperaturaF = 1,8 * temperaturaC + 32
 escrever (temperaturaF)
 
 Testes:
-T1) 1,8 * 24 + 32 = 75,2
+T1) 
+temperaturaC = 24
+temperaturaF = 1,8 * 24 + 32 = 75,2
 
-T2) 1,8 * 28 + 32 = 82,4
+T2) 
+temperaturaC = 28
+temperaturaF = 1,8 * 28 + 32 = 82,4
 
-T3) 1,8 * 32 + 32 = 89,6
+T3)
+temperaturaF = 1,8 * 32 + 32 = 89,6
 
 
 									Uni3Exe12
@@ -322,13 +327,18 @@ escrever (salarioBruto)
 escrever (salarioLiquido)
 
 Testes:
-T1) 100 * 10 + 3 * 60 = R$1180,00
-1180 - 1180 * (13,5 / 100) = R$1020,70
+T1) 
+horasTrabalhadas = 100
+numeroDependentes = 3
+salarioBruto = 100 * 10 + 3 * 60 = R$1180,00
+salarioLiquido = 1180 - 1180 * (13,5 / 100) = R$1020,70
 
-T2) 140 * 10 + 2 * 60 = R$1520,00
+T2) 
+140 * 10 + 2 * 60 = R$1520,00
 1520 - 1520 * (13,5 / 100) = R$1314,8
 
-T3) 160 * 10 + 1 * 60 = R$1660,00
+T3) 
+160 * 10 + 1 * 60 = R$1660,00
 1660 - 1660 * (13,5 / 100) = R$1435,90
 
 
@@ -351,20 +361,29 @@ valorGasto = 12,5 * (areaParede * 9)
 escrever (valorGasto)
 
 Testes:
-T1) 15 * 4 = 60m²
-12,5 * (60 * 9) = R$6.750,00
+T1) 
+comprimento = 15
+altura = 4
+area = 15 * 4 = 60m²
+valorGasto = 12,5 * (60 * 9) = R$6.750,00
 
-T2) 20 * 3,5 = 70
-12,5 * (70 * 9) = R$7.875,00
+T2) 
+comprimento = 20
+altura = 3,5
+area = 20 * 3,5 = 70
+valorGasto = 12,5 * (70 * 9) = R$7.875,00
 
-T3) 25,5 * 3,5 = 89,25
-12,5 * (89,25 * 9) = R$10.040.62
+T3) 
+comprimento = 25,5
+altura = 3,5
+area = 25,5 * 3,5 = 89,25
+valorGasto = 12,5 * (89,25 * 9) = R$10.040.62
 
 
 									Uni3Exe14
 
 Análise:
-faltou indicar a medida
+ok
 
 Entradas:
 distância percorrida, tempo gasto na viagem
@@ -375,19 +394,28 @@ velocidade média, combustível gasto
 Algoritmo:
 ler (distanciaPercorrida) em metros
 ler (tempoGasto) em minustos
-velocidadeMedia = distanciaPercorrida / tempoGasto
-combustivelGasto = distanciaPercorrida / 12
+velocidadeMedia = distanciaPercorrida / tempoGasto * 3,6
+combustivelGasto = (distanciaPercorrida / 1000) / 12
 escrever (velocidadeMedia)
 escrever (combustivelGasto)
 
 Testes:
-T1) VM = (3000 / 180) * 3,6 = 60
+T1)
+DistanciaPercorrida = 3000m
+TempoGasto = 180min
+VM = (3000 / 180) * 3,6 = 60 Km/h
 CG = (3000 / 1000) / 12 = 0,25
 
-T2) VM = (20000 / 800) * 3,6 = 90
+T2) 
+DistanciaPercorrida = 20000m
+TempoGasto = 800m
+VM = (20000 / 800) * 3,6 = 90 Km/h
 CG = (20000 / 1000) / 12 = 1,66
 
-T3) VM = (50000 / 2500) * 3,6 = 72
+T3) 
+DistanciaPercorrida = 50000m
+TempoGasto = 2500min
+VM = (50000 / 2500) * 3,6 = 72 Km/h
 CG = (50000 / 1000) / 12 = 4,16
 
 
@@ -405,16 +433,30 @@ X centena(s) Y dezena(s) K unidade(s)
 Algoritmo:
 ler (numero)
 x = numero / 100
-y = ((numero/10)%10)
-k = (numero%10)
-escrever (x, y. k)
+numero = numero % 100
+y = numero / 10
+numero = numero % 10
+k = numero / 1
+escrever (x, y, k)
 
 Testes:
-T1) x = 384 / 100 = 3
-y = ((384 / 10) %10) = 8
-k = (384 % 10) = 4
+T1) 
+numero = 384
+centena = 3
+dezena = 8
+unidade = 4
 
-T2)
+T2) 
+numero = 456
+centena = 4
+dezena = 5
+unidade = 6
+
+T3)
+numero = 852
+centena = 8
+dezena = 5
+unidade = 2
 
 
 
@@ -432,15 +474,26 @@ número mínimo de notas que o caixa deve fornecer como troco, número de cada t
 Algoritmo:
 ler (valorCompra)
 notas100 = valorCompra / 100
-notas10 = ((valorCompra/10)%10)
-notas1 = (valorCompra%10)
+valorCompra = valorCompra % 100
+notas10 = valorCompra / 10
+ValorCompra = ValorCompra % 10
+notas1 = valorCompra
 
 Testes:
-T1) notas100 = 384 / 100 = 3
-notas10 = ((384 / 10) %10) = 8
-notas1 = (384 % 10) = 4
+T1) 
+valorCompra = 384
+notas100 = 3
+notas10 = 8
+notas1 = 4
 
 T2)
+valorCompra = 555
+notas100 = 5
+notas10 = 5
+notas1 = 5
 
-
-
+T3)
+valorCompra = 732
+notas100 = 7
+notas10 = 3
+notas1 = 2
