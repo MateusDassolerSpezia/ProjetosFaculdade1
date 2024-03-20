@@ -1,7 +1,8 @@
 import java.util.Scanner;
 
 public class Exe3Uri {
-    public static void main(String[] args) {
+    public Exe3Uri() {
+    
         Scanner sc = new Scanner(System.in);
 
         int A = sc.nextInt();
@@ -13,6 +14,10 @@ public class Exe3Uri {
 
 
         sc.close();
+
+    }
+        public static void main(String[] args) {
+            new Exe3Uri();
     }
     
 }

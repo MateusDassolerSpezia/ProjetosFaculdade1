@@ -1,8 +1,8 @@
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
-public class Exe6 {
-    public Exe6() {
+public class Exe6Uni3 {
+    public Exe6Uni3() {
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Digite o peso do prato montado pelo cliente (em Kg): ");
@@ -16,6 +16,6 @@ public class Exe6 {
         sc.close();
     }
     public static void main(String[] args) {
-        new Exe6();
+        new Exe6Uni3();
     }
 }

@@ -1,8 +1,8 @@
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
-public class Exe7 {
-    public Exe7() {
+public class Exe7Uni3 {
+    public Exe7Uni3() {
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Escreva a quantidade de latas: ");
@@ -26,7 +26,7 @@ public class Exe7 {
     }
 
     public static void main(String[] args) {
-        new Exe7();
+        new Exe7Uni3();
     }
     
 }

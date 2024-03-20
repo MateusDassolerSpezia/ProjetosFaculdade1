@@ -2,7 +2,9 @@ import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class Exe7Uri {
-    public static void main(String[] args) {
+    public Exe7Uri() {
+    
+    
         Scanner sc = new Scanner(System.in);
 
         String nome = sc.next();
@@ -16,5 +18,9 @@ public class Exe7Uri {
         //atividade no uri sem o "nome"
 
         sc.close();
+
+    }
+        public static void main(String[] args) {
+            new Exe7Uri();
     }
 }

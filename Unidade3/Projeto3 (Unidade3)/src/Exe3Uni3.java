@@ -1,8 +1,8 @@
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
-public class Exe3 {
-    public Exe3(){
+public class Exe3Uni3 {
+    public Exe3Uni3(){
 
         Scanner sn = new Scanner(System.in);
 
@@ -22,7 +22,7 @@ public class Exe3 {
     }
 
     public static void main(String[] args) {
-        new Exe3();
+        new Exe3Uni3();
     }
     
 }

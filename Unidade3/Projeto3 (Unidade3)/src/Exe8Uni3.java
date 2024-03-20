@@ -1,8 +1,8 @@
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
-public class Exe8 {
-    public Exe8() {
+public class Exe8Uni3 {
+    public Exe8Uni3() {
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Escreva o valor em dólares: US$");
@@ -19,7 +19,7 @@ public class Exe8 {
     }
 
     public static void main(String[] args) {
-        new Exe8();
+        new Exe8Uni3();
     }
     
 }

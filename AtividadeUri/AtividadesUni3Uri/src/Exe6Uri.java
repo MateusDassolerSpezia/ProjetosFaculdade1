@@ -2,7 +2,8 @@ import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class Exe6Uri {
-    public static void main(String[] args) {
+    public Exe6Uri() {
+    
         Scanner sc = new Scanner(System.in);
 
         int number = sc.nextInt();
@@ -17,6 +18,9 @@ public class Exe6Uri {
 
         sc.close();
 
+    }    
+        public static void main(String[] args) {
+            new Exe6Uri();
     }
     
 }

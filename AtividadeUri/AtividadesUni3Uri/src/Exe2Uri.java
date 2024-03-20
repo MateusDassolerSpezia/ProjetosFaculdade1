@@ -3,7 +3,7 @@ import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class Exe2Uri {
-    public static void main(String[] args) {
+    public Exe2Uri() { 
         Scanner sc = new Scanner(System.in);
 
         double raio = sc.nextDouble();
@@ -16,6 +16,10 @@ public class Exe2Uri {
 
 
         sc.close();
+
+    }
+        public static void main(String[] args) {
+            new Exe2Uri();
         
     }
     

@@ -1,8 +1,8 @@
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
-public class Exe1 {
-    public Exe1() {
+public class Exe1Uni3 {
+    public Exe1Uni3() {
 
         Scanner medida = new Scanner(System.in);
 
@@ -24,6 +24,6 @@ public class Exe1 {
 
 
     public static void main(String[] args) {
-        new Exe1();
+        new Exe1Uni3();
     }
 }

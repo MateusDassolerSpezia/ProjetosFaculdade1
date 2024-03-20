@@ -1,8 +1,8 @@
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
-public class Exe10 {
-    public Exe10() {
+public class Exe10Uni3 {
+    public Exe10Uni3() {
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Diigte o cateto1: ");
@@ -19,7 +19,7 @@ public class Exe10 {
         sc.close();
     }
     public static void main(String[] args) {
-        new Exe10();
+        new Exe10Uni3();
     }
     
 }

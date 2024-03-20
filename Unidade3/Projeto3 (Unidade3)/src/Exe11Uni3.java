@@ -1,8 +1,8 @@
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
-public class Exe11 {
-    public Exe11() {
+public class Exe11Uni3 {
+    public Exe11Uni3() {
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Digite a temperatura em °C: ");
@@ -16,7 +16,7 @@ public class Exe11 {
         sc.close();
     }
     public static void main(String[] args) {
-        new Exe11();
+        new Exe11Uni3();
     }
     
 }

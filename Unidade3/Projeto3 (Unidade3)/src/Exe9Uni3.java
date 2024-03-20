@@ -1,8 +1,8 @@
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
-public class Exe9 {
-    public Exe9() {
+public class Exe9Uni3 {
+    public Exe9Uni3() {
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Digite o raio da lata (em metros): ");
@@ -21,7 +21,7 @@ public class Exe9 {
         sc.close();
     }
     public static void main(String[] args) {
-        new Exe9();
+        new Exe9Uni3();
     }
     
 }

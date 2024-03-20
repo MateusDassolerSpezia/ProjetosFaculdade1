@@ -1,8 +1,8 @@
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
-public class Exe4 {
-    public Exe4() {
+public class Exe4Uni3 {
+    public Exe4Uni3() {
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Digite a nota 1: ");
@@ -22,7 +22,7 @@ public class Exe4 {
         sc.close();
     }
     public static void main(String[] args) {
-        new Exe4();
+        new Exe4Uni3();
     }
     
 }

@@ -13,6 +13,9 @@ public class Exe16Uni3 {
         valorCompra = valorCompra % 10;
         int notas1 = valorCompra;
 
+        int minimoNotas = notas100 + notas10 + notas1;
+
+        System.out.println("Total de notas: " + minimoNotas);
         System.out.println(notas100 + " notas de R$ 100");
         System.out.println(notas10 + " notas de R$ 10");
         System.out.println(notas1 + " notas de R$ 1");

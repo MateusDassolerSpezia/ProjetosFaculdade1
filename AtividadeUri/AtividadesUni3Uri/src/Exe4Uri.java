@@ -2,7 +2,8 @@ import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class Exe4Uri {
-    public static void main(String[] args) {
+    public Exe4Uri() {
+    
         Scanner sc = new Scanner(System.in);   
 
         double notaA = sc.nextDouble();
@@ -13,7 +14,10 @@ public class Exe4Uri {
         System.out.println("MEDIA = " + df.format(media));
 
         sc.close();
-    
+
+    }
+        public static void main(String[] args) {
+            new Exe4Uri();
     }
     
 }

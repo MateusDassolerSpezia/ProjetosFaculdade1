@@ -1,8 +1,8 @@
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
-public class Exe5 {
-    public Exe5() {
+public class Exe5Uni3 {
+    public Exe5Uni3() {
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Digite a quantidade de galinhas: ");
@@ -20,6 +20,6 @@ public class Exe5 {
 
     }
     public static void main(String[] args) {
-        new Exe5();
+        new Exe5Uni3();
     }
 }

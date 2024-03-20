@@ -46,23 +46,26 @@ desconto e valor final com o desconto
 
 Testes:
 T1)
-100 * (12 / 100) = 10
-100 - 10 = 90
+valorSapato = 100
+desconto = 100 * (12 / 100) = 10
+valorFinal = 100 - 10 = 90
 
 T2)
-80 * (12 / 100) = 12
-80 - 12 = 68
+valorSapato = 80
+desconto = 80 * (12 / 100) = 12
+valorFinal = 80 - 12 = 68
 
-T3) 
-50,5 * (12 / 100) = 10,1
-50,5 - 10,1 = 40,4
+T3)
+valorSapato = 50,5 
+desconto = 50,5 * (12 / 100) = 10,1
+valorFinal = 50,5 - 10,1 = 40,4
 
 Algoritmo:
-ler valor do sapato
-desconto = valorSapato * (12/100)
+ler (valor do sapato)
+desconto = valorSapato * (12 / 100)
 valorFinal = valorSapato - desconto
-escrever o valor do desconto
-escrever valorFinal
+escrever (valor do desconto)
+escrever (valorFinal)
 
 
 
@@ -81,22 +84,22 @@ Testes:
 T1) 
 valorLitro = 5
 valorPagamento = 100
-100 / 5 = 20
+litrosTanque = 100 / 5 = 20
 
 T2)
 valorLitro = 5,2
 valorPagamento = 100
-100 / 5,2 = 19,2
+litrosTanque = 100 / 5,2 = 19,2
 
 T3)
 valorLitro = 5,1
 valorPagamento = 250
-250 / 5,1 = 49
+litrosTanque = 250 / 5,1 = 49
 
 Algoritmo:
 ler (valorLitro)
 ler (valorPagamento)
-quantidadeLitros = valorPagamento/litroGasolina
+quantidadeLitros = valorPagamento / litroGasolina
 ecrever (litrosTanque)
 
 
@@ -112,15 +115,21 @@ Saída:
 média ponderada
 
 Testes:
-T1) (7 * 5 + 8 * 3 + 9 * 2) / 10 = 7,7
+T1)
+nota1 = 7 nota2 = 8 nota3 = 9
+media = (7 * 5 + 8 * 3 + 9 * 2) / 10 = 7,7
 
-T2) (8,5 * 5 + 6 * 3 + 5 * 2) / 10 = 7,05
+T2) 
+nota1 = 8,5 nota2 = 6 nota3 = 5
+media = (8,5 * 5 + 6 * 3 + 5 * 2) / 10 = 7,05
 
-T3) (7,3 * 5 + 8,6 * 3 + 7,8 * 2) / 10 = 7,79
+T3) 
+nota1 = 7,3 nota2 = 8,6 nota3 = 7,8
+media = (7,3 * 5 + 8,6 * 3 + 7,8 * 2) / 10 = 7,79
 
 Algoritmo:
 ler (nota1, nota2, nota3)
-media = nota1*5 + nota2*3 + nota3*2 / 10 
+media = nota1 * 5 + nota2 * 3 + nota3 * 2 / 10 
 escrever (media)
 
 
@@ -136,11 +145,17 @@ Saída:
 gasto total para marcar todos os frangos
 
 Testes:
-T1) 5 * 4 + 10 * 3,50 = R$55,00
+T1) 
+quantidadeFrangos = 5
+gastoTotal = 5 * 4 + 10 * 3,50 = R$55,00
 
-T2) 10 * 4 + 20 * 3,50 = R$110,00
+T2) 
+quantidadeFrangos = 10
+gastoTotal =10 * 4 + 20 * 3,50 = R$110,00
 
-T3) 50 * 4 + 100 * 3,50 = R$550,00
+T3) 
+quantidadeFrangos = 50
+gastoTotal50 * 4 + 100 * 3,50 = R$550,00
 
 Algoritmo:
 ler (quantidade de frangos)
@@ -161,16 +176,22 @@ Saída:
 valor a pagar
 
 Algoritmo:
-ler (peso do prato montado pelo cliente)
+ler (pesoPratoMontado)
 valorPagar = (pesoPratoMontado - 0,75) * 25
 escrever (valorPagar)
 
 Testes:
-T1) (1,75 - 0,75) * 25 = R$25,00
+T1)
+pesoPratoMontado = 1,75 Kg
+valorPagar = (1,75 - 0,75) * 25 = R$25,00
 
-T2) (2,5 - 0,75) *25 = R$43,75
+T2) 
+pesoPratoMontado = 2,5 Kg
+valorPagar = (2,5 - 0,75) * 25 = R$43,75
 
-T3) (1 - 0,75) * 25 = R$6,25
+T3) 
+pesoPratoMontado = 1 Kg
+valorPago = (1 - 0,75) * 25 = R$6,25
 
 
 									Uni3Exe07
@@ -187,16 +208,28 @@ litros de refrigerante comprados
 Algoritmo:
 ler (quantidadeLatas)
 ler (quantidadeGarrafas600)
-ler (quantidadeGarrafas2000)
-litrosComprados = quantidadeLatas * 0,35 + quantidadeGarrafas600 * 0,6 + quantidadeGarrafas2000 * 2
+ler (quantidadeGarrafas2L)
+litrosComprados = quantidadeLatas * 0,35 + quantidadeGarrafas600 * 0,6 + quantidadeGarrafas2L * 2
 escrever (litrosComprados)
 
 Testes:
-T1) 5 * 0,35 + 3 * 0,6 + 1 * 2 = 
+T1) 
+quantidadeLatas = 5
+quantidadeGarrafas600 = 3
+quantidadeGarrafas2L = 1
+litrosComprados = 5 * 0,35 + 3 * 0,6 + 1 * 2 = 5,55
 
-T2) 8 * 0,35 + 5 * 0,6 + 3 * 2 =
+T2) 
+quantidadeLatas = 8
+quantidadeGarrafas600 = 5
+quantidadeGarrafas2L = 3
+litrosComprados = 8 * 0,35 + 5 * 0,6 + 3 * 2 = 11,8
 
-T3) 12 * 0,35 + 8 * 0,6 + 5 * 2 = 
+T3) 
+quantidadeLatas = 12
+quantidadeGarrafas600 = 8
+quantidadeGarrafas2L = 5
+litrosComprados = 12 * 0,35 + 8 * 0,6 + 5 * 2 = 19
 
 
 
@@ -217,17 +250,23 @@ valorReal = valorDolar * 4,97
 escrever (valorReal)
 
 Testes:
-T1) 25 * 4,97 = US$124,25
+T1) 
+valorDolar = 4,97
+valorReal = 25 * 4,97 = R$ 124,25
 
-T2) 50,5 * 4,97 = US$250,985
+T2) 
+valorDolar = 4,97
+valorReal = 50,5 * 4,97 = R$ 250,985
 
-T3) 125,25 * 4,97 = US$622,4925
+T3) 
+valorDolar = 4,97
+ValorReal = 125,25 * 4,97 = R$ 622,49
 
 
 									Uni3Exe09
 
 Análise:
-faltou a medida (será considerado em metros)
+ok
 
 Entradas:
 raio, altura
@@ -238,15 +277,27 @@ volume da lata de óleo
 Algoritmo:
 ler (raio)
 ler (altura)
-volumeLata = Pi * (raio * raio) * altura
+volumeLata = PI * (raio * raio) * altura
 escrever (volumeLata)
 
 Testes:
-T1) 3,14 * (4 * 4) * 5 = 251,2cm³
+T1) 
+PI = 3,14
+raio = 4
+altura = 5
+volumeLata = 3,14 * (4 * 4) * 5 = 251,2 cm³
 
-T2) 3,14 * (5 * 5) * 8,5 = 667,25cm³
+T2) 
+PI = 3,14
+raio = 5
+altura = 8,5
+volumeLata = 3,14 * (5 * 5) * 8,5 = 667,25 cm³
 
-T3) 3,14 * (3,5 * 3,5) * 9,5 = 365,41cm³
+T3) 
+PI = 3,14
+raio = 3,5
+altura = 9,5
+volumeLata = 3,14 * (3,5 * 3,5) * 9,5 = 365,41 cm³
 
 
 
@@ -269,11 +320,20 @@ hipotenusa = Math.sqrt (cateto1 * cateto1) + (cateto2 * cateto2)
 escrever (hipotenusa)
 
 Testes:
-T1) H = Math.sqrt (10 * 10) + (8 * 8) = 12,8
+T1) 
+cateto1 = 10
+cateto2 = 8
+hipotenusa = Math.sqrt (10 * 10) + (8 * 8) = 12,8
 
-T2) H = Math.sqrt (10 * 10) + (8 * 8) =
+T2) 
+cateto1 = 12
+cateto2 = 6
+hipotenusa = Math.sqrt (12 * 12) + (6 * 6) = 13,4
 
-T3) H = Math.sqrt (10 * 10) + (8 * 8) =
+T3) 
+cateto1 = 11,5
+cateto2 = 9,5
+hipotenusa = Math.sqrt (11,5 * 11,5) + (9,5 * 9,5) = 14,9
 							
 
 
@@ -303,6 +363,7 @@ temperaturaC = 28
 temperaturaF = 1,8 * 28 + 32 = 82,4
 
 T3)
+temperaturaC = 32
 temperaturaF = 1,8 * 32 + 32 = 89,6
 
 
@@ -331,15 +392,19 @@ T1)
 horasTrabalhadas = 100
 numeroDependentes = 3
 salarioBruto = 100 * 10 + 3 * 60 = R$1180,00
-salarioLiquido = 1180 - 1180 * (13,5 / 100) = R$1020,70
+salarioLiquido = 1180 - 1180 * (13,5 / 100) = R$ 1020,70
 
 T2) 
-140 * 10 + 2 * 60 = R$1520,00
-1520 - 1520 * (13,5 / 100) = R$1314,8
+horasTrabalhadas = 140
+numeroDependentes = 2
+salarioBruto = 140 * 10 + 2 * 60 = R$ 1520,00
+salarioLiquido = 1520 - 1520 * (13,5 / 100) = R$ 1314,8
 
 T3) 
-160 * 10 + 1 * 60 = R$1660,00
-1660 - 1660 * (13,5 / 100) = R$1435,90
+horasTrabalhadas = 160
+numeroDependentes = 1
+salarioBruto = 160 * 10 + 1 * 60 = R$ 1660,00
+salarioLiquido = 1660 - 1660 * (13,5 / 100) = R$ 1435,90
 
 
 									Uni3Exe13
@@ -403,20 +468,20 @@ Testes:
 T1)
 DistanciaPercorrida = 3000m
 TempoGasto = 180min
-VM = (3000 / 180) * 3,6 = 60 Km/h
-CG = (3000 / 1000) / 12 = 0,25
+velocidadeMedia = (3000 / 180) * 3,6 = 60 Km/h
+combustivelGasto = (3000 / 1000) / 12 = 0,25 L
 
 T2) 
 DistanciaPercorrida = 20000m
 TempoGasto = 800m
-VM = (20000 / 800) * 3,6 = 90 Km/h
-CG = (20000 / 1000) / 12 = 1,66
+velocidadeMedia = (20000 / 800) * 3,6 = 90 Km/h
+combustivelGasto = (20000 / 1000) / 12 = 1,66 L
 
 T3) 
 DistanciaPercorrida = 50000m
 TempoGasto = 2500min
-VM = (50000 / 2500) * 3,6 = 72 Km/h
-CG = (50000 / 1000) / 12 = 4,16
+velocidadeMedia = (50000 / 2500) * 3,6 = 72 Km/h
+combustivelGasto = (50000 / 1000) / 12 = 4,16 L
 
 
 									Uni3Exe15
@@ -478,22 +543,30 @@ valorCompra = valorCompra % 100
 notas10 = valorCompra / 10
 ValorCompra = ValorCompra % 10
 notas1 = valorCompra
+minimoNotas = notas100 + notas10 + notas1
+escrever (minimoNotas)
+escrever (notas100)
+escrever (notas10)
+escrever (notas1)
 
 Testes:
 T1) 
 valorCompra = 384
+minimoNotas = 15
 notas100 = 3
 notas10 = 8
 notas1 = 4
 
 T2)
 valorCompra = 555
+minimoNotas = 15
 notas100 = 5
 notas10 = 5
 notas1 = 5
 
 T3)
 valorCompra = 732
+minimoNotas = 12
 notas100 = 7
 notas10 = 3
 notas1 = 2
