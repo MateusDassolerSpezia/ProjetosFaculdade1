@@ -22,7 +22,7 @@ public class Exe3 {
     }
 
     public static void main(String[] args) {
-        new Exe3Uni2();
+        new Exe3();
     }
     
 }

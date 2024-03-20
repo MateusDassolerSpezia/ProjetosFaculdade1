@@ -19,7 +19,7 @@ public class Exe8 {
     }
 
     public static void main(String[] args) {
-        new Exe8Uni2();
+        new Exe8();
     }
     
 }

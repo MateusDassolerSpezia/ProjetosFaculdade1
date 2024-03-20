@@ -13,13 +13,13 @@ public class Exe5 {
 
         float precoPagar = anelShip * 4 + aneisAlimentacao * 3.5f;
         DecimalFormat df = new DecimalFormat("0.00");
-        System.out.print("Gasto total para marcar todos os frangos: R$" + df.format(precoPagar));
+        System.out.print("Gasto total para marcar todos os frangos: R$ " + df.format(precoPagar));
 
 
         sc.close();
 
     }
     public static void main(String[] args) {
-        new Exe5Uni2();
+        new Exe5();
     }
 }

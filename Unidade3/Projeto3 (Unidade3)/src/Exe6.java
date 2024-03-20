@@ -10,12 +10,12 @@ public class Exe6 {
 
         float precoPagar = (pesoPratoMontado - 0.75f) * 25;
         DecimalFormat df = new DecimalFormat("0.00");
-        System.out.print("Valor a pagar: R$" + df.format(precoPagar));
+        System.out.print("Valor a pagar: R$ " + df.format(precoPagar));
 
 
         sc.close();
     }
     public static void main(String[] args) {
-        new Exe6Uni2();
+        new Exe6();
     }
 }

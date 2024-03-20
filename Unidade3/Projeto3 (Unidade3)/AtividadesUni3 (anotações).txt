@@ -59,7 +59,7 @@ T3)
 
 Algoritmo:
 ler valor do sapato
-desconto = (valorSapato * (12/100)
+desconto = valorSapato * (12/100)
 valorFinal = valorSapato - desconto
 escrever o valor do desconto
 escrever valorFinal
@@ -167,7 +167,9 @@ escrever (valorPagar)
 
 Testes:
 T1) (1,75 - 0,75) * 25 = R$25,00
+
 T2) (2,5 - 0,75) *25 = R$43,75
+
 T3) (1 - 0,75) * 25 = R$6,25
 
 
@@ -263,14 +265,15 @@ hipotenusa
 Algoritmo:
 ler (cateto1)
 ler (cateto2)
-hipotenusa = cateto1² + cateto2²
+hipotenusa = Math.sqrt (cateto1 * cateto1) + (cateto2 * cateto2)
+escrever (hipotenusa)
 
 Testes:
-T1) 
+T1) H = Math.sqrt (10 * 10) + (8 * 8) = 12,8
 
-T2)
+T2) H = Math.sqrt (10 * 10) + (8 * 8) =
 
-T3)
+T3) H = Math.sqrt (10 * 10) + (8 * 8) =
 							
 
 
@@ -341,8 +344,8 @@ Saída:
 valor gasto com a compra de azulejos
 
 Algoritmo:
-ler (comprimento)
-ler (altura)
+ler (comprimento) em metros
+ler (altura) em metros
 areaParede = comprimento * altura
 valorGasto = 12,5 * (areaParede * 9)
 escrever (valorGasto)
@@ -370,19 +373,22 @@ Saída:
 velocidade média, combustível gasto
 
 Algoritmo:
-ler (distanciaPercorrida)
-ler (tempoGasto)
+ler (distanciaPercorrida) em metros
+ler (tempoGasto) em minustos
 velocidadeMedia = distanciaPercorrida / tempoGasto
 combustivelGasto = distanciaPercorrida / 12
 escrever (velocidadeMedia)
 escrever (combustivelGasto)
 
 Testes:
-T1)
+T1) VM = (3000 / 180) * 3,6 = 60
+CG = (3000 / 1000) / 12 = 0,25
 
-T2)
+T2) VM = (20000 / 800) * 3,6 = 90
+CG = (20000 / 1000) / 12 = 1,66
 
-T3)
+T3) VM = (50000 / 2500) * 3,6 = 72
+CG = (50000 / 1000) / 12 = 4,16
 
 
 									Uni3Exe15
@@ -398,6 +404,17 @@ X centena(s) Y dezena(s) K unidade(s)
 
 Algoritmo:
 ler (numero)
+x = numero / 100
+y = ((numero/10)%10)
+k = (numero%10)
+escrever (x, y. k)
+
+Testes:
+T1) x = 384 / 100 = 3
+y = ((384 / 10) %10) = 8
+k = (384 % 10) = 4
+
+T2)
 
 
 
@@ -414,6 +431,16 @@ número mínimo de notas que o caixa deve fornecer como troco, número de cada t
 
 Algoritmo:
 ler (valorCompra)
+notas100 = valorCompra / 100
+notas10 = ((valorCompra/10)%10)
+notas1 = (valorCompra%10)
+
+Testes:
+T1) notas100 = 384 / 100 = 3
+notas10 = ((384 / 10) %10) = 8
+notas1 = (384 % 10) = 4
+
+T2)
 
 
 

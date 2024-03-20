@@ -26,7 +26,7 @@ public class Exe7 {
     }
 
     public static void main(String[] args) {
-        new Exe7Uni2();
+        new Exe7();
     }
     
 }
