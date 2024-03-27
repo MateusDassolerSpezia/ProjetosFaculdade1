@@ -5,10 +5,13 @@ public class Exe5Uni4 {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("A cor é azul?");
-        String resposta = sc.next();
+        boolean resposta = sc.nextBoolean();
 
-        switch(resposta) {
-            
+        if (resposta) {
+            System.out.println("Sim");
+        }
+        if (!resposta) {
+            System.out.println("Não");
         }
 
 
