@@ -24,6 +24,7 @@ public class Exe12Uni4 {
             System.out.println("é escaleno");
         }
     
+        
         sc.close();
     }
     public static void main(String[] args) {

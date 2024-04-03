@@ -18,7 +18,6 @@ public class Exe11Uni4 {
         }
 
 
-
         sc.close();
     }
     public static void main(String[] args) {
