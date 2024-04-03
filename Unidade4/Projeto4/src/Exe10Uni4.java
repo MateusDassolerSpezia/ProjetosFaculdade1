@@ -12,7 +12,7 @@ public class Exe10Uni4 {
         if (idadeM < idadeZ && idadeM < idadeL) {
             System.out.println("Marquinhos é o caçula");
         }
-        else if (idadeZ < idadeM && idadeZ < idadeL) {
+        else if (idadeZ < idadeL) {
             System.out.println("Zezinho é o caçula");
         }
         else {

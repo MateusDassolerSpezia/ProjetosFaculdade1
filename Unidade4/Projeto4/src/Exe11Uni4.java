@@ -17,6 +17,14 @@ public class Exe11Uni4 {
             System.out.println("São apenas irmãos");
         }
 
+        /*if (irmao1 == irmao2  && irmao1 == irmao3) {
+            System.out.println("São trigêmeos");
+        } else if (irmao1 != irmao2 && irmao1 != irmao3 && irmao2 != irmao3) {
+            System.out.println("São apenas irmãos");
+        } else {
+            System.out.println("São Gêmeos");
+        }/* */
+
 
         sc.close();
     }
