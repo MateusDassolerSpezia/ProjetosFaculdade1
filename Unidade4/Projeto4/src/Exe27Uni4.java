@@ -22,7 +22,7 @@ public class Exe27Uni4 {
         int minutosEstacionado = (minutosSaida - minutosChegada);
         System.out.println("tempo estacionado: " + horasEstacionado + "h" + minutosEstacionado);
 
-        if (horasEstacionado <= 1 && minutosEstacionado < 30) {
+        /*if (horasEstacionado <= 1 && minutosEstacionado < 30) {
             System.out.println("Preço a pagar: R$ 5,00");
         } else if (horasEstacionado <= 1 && minutosEstacionado >= 30) {
             System.out.println("Preço a pagar: R$ " + df.format((horasEstacionado + 1) * 5));
@@ -42,7 +42,11 @@ public class Exe27Uni4 {
             System.out.println("Preço a pagar: R$ " + df.format(horasEstacionado * 10));
         } else if (horasEstacionado >= 5 && minutosEstacionado >= 30) {
             System.out.println("Preço a pagar: R$ " + df.format((horasEstacionado + 1) * 10));
-        } 
+        } /* */
+
+        switch (horasEstacionado) {
+            case 1: 
+        }
 
 
         sc.close();

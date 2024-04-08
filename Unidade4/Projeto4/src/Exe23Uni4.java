@@ -7,7 +7,7 @@ public class Exe23Uni4 {
         System.out.println("Entre com o número do mês: ");
         int mes = sc.nextInt();
 
-        if (mes == 1) {
+        /*if (mes == 1) {
             System.out.println("Janeiro");
         } else if (mes == 2) {
             System.out.println("Fevereiro");
@@ -31,7 +31,7 @@ public class Exe23Uni4 {
             System.out.println("Novembro");
         } else if (mes == 12) {
             System.out.println("Dezembro");
-        } 
+        } /* */
 
         switch (mes) {
             case 1: System.out.println("Janeiro");

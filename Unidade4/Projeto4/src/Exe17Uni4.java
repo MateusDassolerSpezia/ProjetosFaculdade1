@@ -12,13 +12,13 @@ public class Exe17Uni4 {
         System.out.println("Digite o número de dependentes: ");
         int numDependentes = sc.nextInt();
 
-        if (rendaAnual < 2000.01) {
+        if (rendaAnual <= 2000) {
             System.out.println("Não paga imposto");
-        } else if (rendaAnual > 2000 && rendaAnual < 5000.01) {
+        } else if (rendaAnual > 2000 && rendaAnual <= 5000) {
             float rendaLiquida = rendaAnual - rendaAnual * (numDependentes * 2/100f);
             float imposto = rendaLiquida * 5/100f;
             System.out.println("Imposto de Renda a ser pago = R$ " + df.format(imposto));
-        } else if (rendaAnual > 5000.01 && rendaAnual < 10000.01) {
+        } else if (rendaAnual > 5000.01 && rendaAnual <= 10000) {
             float rendaLiquida = rendaAnual - rendaAnual * (numDependentes * 2/100f);
             float imposto = rendaLiquida * 10/100f;
             System.out.println("Imposto de Renda a ser pago = R$ " + df.format(imposto));

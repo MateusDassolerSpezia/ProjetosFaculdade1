@@ -14,7 +14,7 @@ public class Exe25Uni4 {
 
         int opçao = sc.nextInt();
 
-        if (opçao == 1) {
+        /*if (opçao == 1) {
             System.out.println("Digite dois números");
             float num1 = sc.nextFloat();
             float num2 = sc.nextFloat();
@@ -34,9 +34,36 @@ public class Exe25Uni4 {
             float num1 = sc.nextFloat();
             float num2 = sc.nextFloat();
             System.out.println("A divisão desses números é " + df.format(num1 / num2));
-        }
+        }/* */
 
-       
+       switch (opçao) {
+            case 1: 
+            System.out.println("Digite dois números");
+            float num1 = sc.nextFloat();
+            float num2 = sc.nextFloat();
+            System.out.println("A soma desses números é " + df.format(num1 + num2));
+                break;
+            case 2: 
+            System.out.println("Digite dois numeros");
+            float num3 = sc.nextFloat();
+            float num4 = sc.nextFloat();
+            System.out.println("A diferença desses números é " + df.format(num3 - num4));
+                break;
+            case 3: 
+            System.out.println("Digite dois numeros");
+            float num5 = sc.nextFloat();
+            float num6 = sc.nextFloat();
+            System.out.println("O produto desses números é " + df.format(num5 * num6));
+                break;
+            case 4: 
+            System.out.println("Digite dois numeros:");
+            float num7 = sc.nextFloat();
+            float num8 = sc.nextFloat();
+            System.out.println("A divisão desses números é " + df.format(num7 / num8));
+                break;
+            default: System.out.println("Valor inválido");
+       }
+
 
         sc.close();
     }
