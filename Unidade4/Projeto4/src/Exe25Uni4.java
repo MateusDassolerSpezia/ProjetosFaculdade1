@@ -14,29 +14,7 @@ public class Exe25Uni4 {
 
         int opçao = sc.nextInt();
 
-        /*if (opçao == 1) {
-            System.out.println("Digite dois números");
-            float num1 = sc.nextFloat();
-            float num2 = sc.nextFloat();
-            System.out.println("A soma desses números é " + df.format(num1 + num2));
-        } else if (opçao == 2) {
-            System.out.println("Digite dois numeros");
-            float num1 = sc.nextFloat();
-            float num2 = sc.nextFloat();
-            System.out.println("A diferença desses números é " + df.format(num1 - num2));
-        } else if (opçao == 3) {
-            System.out.println("Digite dois numeros");
-            float num1 = sc.nextFloat();
-            float num2 = sc.nextFloat();
-            System.out.println("O produto desses números é " + df.format(num1 * num2));
-        } else if (opçao == 4) {
-            System.out.println("Digite dois numeros:");
-            float num1 = sc.nextFloat();
-            float num2 = sc.nextFloat();
-            System.out.println("A divisão desses números é " + df.format(num1 / num2));
-        }/* */
-
-       switch (opçao) {
+        switch (opçao) {
             case 1: 
             System.out.println("Digite dois números");
             float num1 = sc.nextFloat();

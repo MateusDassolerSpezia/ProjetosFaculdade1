@@ -13,10 +13,11 @@ public class Exe12Uni4 {
         System.out.println("Entre com o comprimento do lado3: ");
         float lado3 = sc.nextFloat();
 
-        if (lado1 < (lado2 + lado3) &&  lado2 < (lado1 + lado3) && lado3 < (lado1 + lado2)) {
+        if (lado1 < (lado2 + lado3) && lado2 < (lado1 + lado3) && lado3 < (lado1 + lado2)) {
         } else {
             System.out.println("não formam um triângulo");
-        } if (lado1 == lado2 && lado1 == lado3) {
+        } 
+        if (lado1 == lado2 && lado1 == lado3) {
             System.out.println("é equilatero");
         } else if (lado1 == lado2 || lado2 ==lado3 || lado1 == lado3) {
             System.out.println("é isóceles");

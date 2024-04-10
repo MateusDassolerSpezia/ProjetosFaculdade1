@@ -11,14 +11,6 @@ public class Exe22Uni4 {
 
         int curso = sc.nextInt();
 
-        /*if (curso == 1) {
-            System.out.println("Vai receber o título: Bacharel em Ciência da Computação");
-        } else if (curso == 2) {
-            System.out.println("Vai receber o título: Licenciado em Computação");
-        } else if (curso == 3) {
-            System.out.println("Vai receber o título: Bacharel em Sistemas de Informação");
-        }/* */
-
         switch (curso) {
             case 1: System.out.println("Vai receber o título: Bacharel em Ciência da Computação");
                 break;

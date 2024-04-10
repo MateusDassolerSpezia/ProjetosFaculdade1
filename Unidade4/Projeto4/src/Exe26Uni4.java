@@ -14,26 +14,6 @@ public class Exe26Uni4 {
 
         char opçao = sc.nextLine().toUpperCase().charAt(0);
 
-        /*if (opçao == 'T') {
-            System.out.println("Digite a base e a altura do triângulo: ");
-            float base = sc.nextFloat();
-            float altura = sc.nextFloat();
-            System.out.println("Área do triangulo =" + base * altura/2);
-        } else if (opçao == 'Q') {
-            System.out.println("Digite o lado: ");
-            float lado = sc.nextFloat();
-            System.out.println("Área do quadrado =" + lado * lado);
-        } else if (opçao == 'R') {
-            System.out.println("Digite a base a a altura do retângulo: ");
-            float b = sc.nextFloat();
-            float h = sc.nextFloat();
-            System.out.println("Área do retângulo =" + b * h);
-        } else if (opçao == 'C') {
-            System.out.println("Digite o raio: ");
-            float r = sc.nextFloat();
-            System.out.println("Área do circulo =" + Math.PI * Math.pow(r, 2));
-        }/* */
-
         switch (opçao) {
             case 'T': 
             System.out.println("Digite a base e a altura do triângulo: ");
