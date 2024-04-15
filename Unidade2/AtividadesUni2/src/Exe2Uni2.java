@@ -15,6 +15,6 @@ public class Exe2Uni2 {
         sc.close();
     }
     public static void main(String[] args) {
-        new Exe2Uni1();
+        new Exe2Uni2();
     }
 }
