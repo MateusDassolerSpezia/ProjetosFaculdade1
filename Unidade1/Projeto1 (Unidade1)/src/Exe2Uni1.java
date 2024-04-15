@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
-public class Exe2Uni2 {
+public class Exe2Uni1 {
     
-  public Exe2Uni2(){
+  public Exe2Uni1(){
   //Construtor da classe: possui o MESMO NOME da classe
 
     Scanner teclado = new Scanner(System.in);
@@ -19,6 +19,6 @@ public class Exe2Uni2 {
     teclado.close();    
   }
     public static void main(String[] args) {
-        new Exe2Uni2(); //Chama o construtor da classe
+        new Exe2Uni1(); //Chama o construtor da classe
     }
 }
