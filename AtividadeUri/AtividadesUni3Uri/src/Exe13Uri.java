@@ -7,8 +7,8 @@ public class Exe13Uri {
         int totalSegundos = sc.nextInt();
 
         int horas = totalSegundos / 3600;
-        int minutos = (totalSegundos%3600) / 60;
-        int segundos = ((totalSegundos%3600)%60) / 1;
+        int minutos = (totalSegundos % 3600) / 60;
+        int segundos = ((totalSegundos % 3600) % 60) / 1;
 
         System.out.println(horas + " : " + minutos + " : " + segundos);
 

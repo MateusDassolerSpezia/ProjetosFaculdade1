@@ -13,6 +13,10 @@ public class Exemplo6Uni4 {
             System.out.println("É falso");
         }
 
+        if (!valor) {
+            System.out.println("É falso");
+        }
+
 
         sc.close();
     }
