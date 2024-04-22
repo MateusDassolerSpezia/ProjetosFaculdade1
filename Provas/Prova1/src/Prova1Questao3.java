@@ -20,7 +20,7 @@ public class Prova1Questao3 {
     
         System.out.println("Acabei");
 
-        
+    
     }
     public static void main(String[] args) {
         new Prova1Questao3();
