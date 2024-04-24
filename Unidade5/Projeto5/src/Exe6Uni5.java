@@ -7,7 +7,7 @@ public class Exe6Uni5 {
         float media = 0;
         float alturaTotal = 0;
 
-        for (int pessoas = 1; pessoas <=20; pessoas++) {
+        for (int pessoas = 1; pessoas <= 20; pessoas++) {
             System.out.println("Digite as alturas: ");
             float altura = sc.nextFloat();
             alturaTotal += altura;
