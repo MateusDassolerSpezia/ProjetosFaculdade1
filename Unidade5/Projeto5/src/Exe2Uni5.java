@@ -1,21 +1,21 @@
-import java.util.Scanner;
-
 public class Exe2Uni5 {
     public Exe2Uni5() {
-        Scanner sc = new Scanner(System.in);
+      
+        int somaPar = 0;
+        int somaImpar = 0;
 
-        for (int num = 1; num <= 100; num++) {
-            if (num % 2 == 0) {
-                int soma = num + num;
-                System.out.println(soma);
+        for (int num = 1; num <= 100; num ++) {
+           if (num % 2 == 0) {
+                somaPar += num;
             } else {
-                num = num + num;
-                System.out.println(num);
+                somaImpar += num;   
             }
         }
 
+        System.out.println("Soma dos pares: " + somaPar);
+        System.out.println("Soma dos ímpares: " + somaImpar);
 
-        sc.close();
+        
     }
     public static void main(String[] args) {
         new Exe2Uni5();
