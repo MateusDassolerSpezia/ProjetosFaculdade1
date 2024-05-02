@@ -15,9 +15,9 @@ public class Exe5Uni5 {
                 System.out.println(numeros);
                 numeros += progressao1;
             } else {
-            System.out.println(numeros);
-            numeros += progressao2;
-            progressao2 = (progressao2 + 1) * 2;
+                System.out.println(numeros);
+                numeros += progressao2;
+                progressao2 = (progressao2 + 1) * 2;
         }
         }
 

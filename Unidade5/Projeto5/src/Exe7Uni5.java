@@ -10,8 +10,7 @@ public class Exe7Uni5 {
         int menor = 0;
 
         for (int cont = 1;cont <= n; cont++) {
-            n = maior;
-            n = menor;
+            
         }
 
 
