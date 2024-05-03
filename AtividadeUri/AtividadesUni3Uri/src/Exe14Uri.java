@@ -2,9 +2,11 @@ import java.util.Scanner;
 
 public class Exe14Uri {
     public Exe14Uri() {
+
         Scanner sc = new Scanner(System.in);
 
-        double valor = sc.nextDouble();
+        System.out.println("Digite o valor do troco:");
+        float valor = sc.nextFloat();
         int valorI = (int) (valor * 100);
         
         int valorN = valorI / 100;
