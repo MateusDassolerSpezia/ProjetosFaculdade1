@@ -4,6 +4,7 @@ public class Exe5Uni5 {
     public Exe5Uni5() {
         Scanner sc = new Scanner(System.in);
 
+        System.out.println("Digite a quantidade de termos:");
         float n = sc.nextFloat();
         
         float numeros = 8;
