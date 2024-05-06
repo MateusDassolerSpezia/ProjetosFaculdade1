@@ -10,7 +10,7 @@ public class Exe14Uni5 {
 
         for (int mercadorias = 1; mercadorias <= 20; mercadorias++) {
             System.out.println("Digite o nome da mercadoria: ");
-            String nome = sc.nextLine();
+            String nome = sc.next();
             System.out.println("Digite o preço de compra: ");
             float PC = sc.nextFloat();
             System.out.println("Digite o preço de venda: ");

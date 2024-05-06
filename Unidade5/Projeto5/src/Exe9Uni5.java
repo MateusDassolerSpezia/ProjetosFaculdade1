@@ -8,23 +8,25 @@ public class Exe9Uni5 {
         int n = sc.nextInt();
 
         int quantidade20 = 0;
+        String nomeAlunos18 = "";
 
         for (int cont = 1; cont <= n; cont ++) {
-            System.out.println("Digite os nomes alunos:");
-            String nome = sc.nextLine();
-            System.out.println("Digite as idades dos alunos");
+            System.out.println("Digite o nome do(a) aluno(a):");
+            String nome = sc.next();
+            System.out.println("Digite a idade do(a) aluno(a):");
             int idade = sc.nextInt();
         
             if (idade == 18) {
-                System.out.println(nome);
-            } else if (idade > 20) {
-                quantidade20 += cont;
-                System.out.println(quantidade20);
+                nomeAlunos18 += nome + "\n";
+            } 
+            if (idade > 20) {
+                quantidade20 ++;
             }
         
         }
-
         
+        System.out.print("Alunos com 18 anos:" + "\n" + nomeAlunos18);
+        System.out.println("aluno(s) com mais de 20 anos:" + "\n" + quantidade20);
 
 
         sc.close();
