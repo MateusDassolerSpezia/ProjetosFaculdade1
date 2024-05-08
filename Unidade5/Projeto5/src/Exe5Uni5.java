@@ -7,9 +7,11 @@ public class Exe5Uni5 {
         System.out.println("Digite a quantidade de termos:");
         float n = sc.nextFloat();
         
+        if (n > 2) {
         float numeros = 8;
         float progressao1 = 2;
         float progressao2 = 6;
+        
 
         for (int cont = 0; cont < n; cont++) {
             if (cont % 2 == 0) {
@@ -21,7 +23,7 @@ public class Exe5Uni5 {
                 progressao2 = (progressao2 + 1) * 2;
         }
         }
-
+        }
 
         sc.close();
 

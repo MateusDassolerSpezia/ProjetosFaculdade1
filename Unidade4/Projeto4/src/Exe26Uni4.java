@@ -12,7 +12,7 @@ public class Exe26Uni4 {
         System.out.println("R: calcular a área de um retângulo de base b e altura h");
         System.out.println("C: calcular a área de um circulo de raio r");
 
-        char opçao = sc.nextLine().toUpperCase().charAt(0);
+        char opçao = sc.next().toUpperCase().charAt(0);
 
         switch (opçao) {
             case 'T': 

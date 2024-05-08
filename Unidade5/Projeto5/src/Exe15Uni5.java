@@ -5,7 +5,7 @@ public class Exe15Uni5 {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Digite o nome do aluno:");
-        String nome = sc.nextLine();
+        String nome = sc.next();
 
         while (!nome.trim().equals("fim")) {
             System.out.println("Digite a nota das duas provas:");
@@ -14,7 +14,8 @@ public class Exe15Uni5 {
             float media = (nota1 + nota2) / 2;
             System.out.println(nome + " tem média " + media);
             System.out.println("Digite o nome do aluno:");
-            nome = sc.nextLine();
+            nome = sc.next();
+            
         }
 
 

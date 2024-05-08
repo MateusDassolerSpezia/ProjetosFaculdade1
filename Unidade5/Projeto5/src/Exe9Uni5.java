@@ -7,7 +7,7 @@ public class Exe9Uni5 {
         System.out.println("Digite a quantidade de alunos:");
         int n = sc.nextInt();
 
-        int quantidade20 = 0;
+        int quantidadeMaior20 = 0;
         String nomeAlunos18 = "";
 
         for (int cont = 1; cont <= n; cont ++) {
@@ -20,13 +20,13 @@ public class Exe9Uni5 {
                 nomeAlunos18 += nome + "\n";
             } 
             if (idade > 20) {
-                quantidade20 ++;
+                quantidadeMaior20 ++;
             }
         
         }
         
         System.out.print("Alunos com 18 anos:" + "\n" + nomeAlunos18);
-        System.out.println("aluno(s) com mais de 20 anos:" + "\n" + quantidade20);
+        System.out.println("aluno(s) com mais de 20 anos:" + "\n" + quantidadeMaior20);
 
 
         sc.close();

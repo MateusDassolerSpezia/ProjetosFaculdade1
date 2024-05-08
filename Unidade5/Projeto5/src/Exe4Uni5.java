@@ -6,7 +6,7 @@ public class Exe4Uni5 {
         float denominador = 2;
         float progressaoDenominador = 4;
 
-        for (float contador = 0; contador < 20; contador++) {
+        for (int contador = 0; contador < 20; contador++) {
             S += (numerador / denominador);
             numerador += 2;
             denominador += progressaoDenominador;
