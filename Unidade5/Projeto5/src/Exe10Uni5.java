@@ -1,6 +1,8 @@
 public class Exe10Uni5 {
     public Exe10Uni5() {
 
+        int a = 0;
+
         /*int valorVariavel = 20;
         int conta = 0;
 
