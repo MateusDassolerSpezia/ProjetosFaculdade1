@@ -23,7 +23,7 @@ public class Exe17Uni5 {
         float alturaMedia = 0;
 
         while (numeroInscriçao != 0) {
-            System.out.println("Digite a altura do atleta:");
+            System.out.println("Digite a altura do atleta (em metros):");
             altura = sc.nextFloat();
             if (altura > atletaMaisAlto) {
                 atletaMaisAlto = altura;

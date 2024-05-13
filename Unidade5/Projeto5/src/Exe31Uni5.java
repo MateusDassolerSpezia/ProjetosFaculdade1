@@ -9,10 +9,10 @@ public class Exe31Uni5 {
 
         int decompositor = 2;
 
-        System.out.println("Decompositores do número: ");
+        System.out.println("Decompositores do número: \nNúmero | Decomposição");
         while (numero != 1) {
             if (numero % decompositor == 0) {
-            System.out.println(numero + " " + decompositor);
+            System.out.println(numero + " | " + decompositor);
 		    numero = numero / decompositor;
 	    } else{
 		decompositor += 1;
