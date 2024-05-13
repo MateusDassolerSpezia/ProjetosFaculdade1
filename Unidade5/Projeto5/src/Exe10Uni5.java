@@ -1,9 +1,7 @@
 public class Exe10Uni5 {
     public Exe10Uni5() {
 
-        int a = 0;
-
-        /*int valorVariavel = 20;
+        int valorVariavel = 20;
         int conta = 0;
 
         for (int contador = 0; contador < 10; contador++) {
@@ -18,7 +16,7 @@ public class Exe10Uni5 {
                 valorVariavel += 40;
                 System.out.println(conta);
             }
-        }/* */
+        }
     }
     public static void main(String[] args) {
         new Exe10Uni5();
