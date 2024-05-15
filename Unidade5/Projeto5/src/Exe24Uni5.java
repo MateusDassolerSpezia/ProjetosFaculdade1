@@ -25,7 +25,7 @@ public class Exe24Uni5 {
         }
 
         System.out.println("peso obtido: " + pesoTotal + "Kg");
-        if (pesoTotal > 2) {
+        if (pesoTotal > pesoLimite) {
         System.out.println("Limite excedido");
         }
 
