@@ -14,9 +14,9 @@ public class Exe4Uni6 {
         private void ler(int[] vetor1, int vetor2[]) {
             Scanner sc = new Scanner(System.in);
     
-            System.out.println("Popular vetor 1:");
+            System.out.println("Popular vetor 1: ");
             for (int i = 0; i < vetor1.length; i++) {
-                System.out.println("Número " + (i+1) + ":");
+                System.out.print("Número " + (i+1) + ": ");
                 vetor1[i] = sc.nextInt();
             }
     
