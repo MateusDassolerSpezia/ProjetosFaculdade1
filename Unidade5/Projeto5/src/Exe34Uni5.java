@@ -17,9 +17,9 @@ public class Exe34Uni5 {
 
         int opcao = 0;
         do {
-            System.out.println("Escolha uma opção: \r\n" +
-            "(1) encerrar a conta de um hóspede;\r\n" + 
-            "(2) verificar número de contas encerradas;\r\n" + 
+            System.out.println("Escolha uma opção: \n" +
+            "(1) encerrar a conta de um hóspede;\n" + 
+            "(2) verificar número de contas encerradas;\n" + 
             "(3) sair.");
             opcao = sc.nextInt();
 
