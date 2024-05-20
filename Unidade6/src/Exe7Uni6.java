@@ -32,27 +32,6 @@ public class Exe7Uni6 {
             System.out.println(vetor[i]);
         }
     }
-        
-    
-
-        /*int bolha;
-        int indice = 0;
-
-        for (int i = 0; i < vetor.length; i++) {
-        while (indice < (tamanho - 1)) {
-            if (vetor[i] > vetor[i+1]) {
-                bolha = vetor[i];
-                vetor[i] = vetor[i+1];
-                vetor[i+1] = bolha;
-                indice = 0;
-            } else {
-                indice = indice + 1;
-            }
-        }
-        System.out.println(vetor[i]);
-    }*/
-
-        
 
         sc.close();
     }
