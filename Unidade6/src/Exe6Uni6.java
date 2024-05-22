@@ -2,37 +2,41 @@ import java.util.Scanner;
 
 public class Exe6Uni6 {
     public Exe6Uni6() {
-
         Scanner sc = new Scanner(System.in);
-        
-        System.out.print("Digite a quantidade de elementos: ");
-        int tamanho = sc.nextInt();
-        float vetor[] = new float[tamanho];
 
+        System.out.println("Digite o tamanho do vetor: ");
+        int n = sc.nextInt();
+        float numeros[] = new float[n];
 
-        for (int i = 0; i < vetor.length; i++) {
-            System.out.print("Número [" + (i+1) + "]: ");
-            vetor[i] = sc.nextFloat();
-        }
+        ler(numeros, sc);
         
-        System.out.print("Informe um outro valor real: ");
-        float outroValor = sc.nextFloat();
-        float valorTem = 0;
-        
-        for (int i = 0; i < vetor.length; i++) {
-        if (outroValor == vetor[i]) {
-            valorTem = outroValor;
-        } 
-        }
-
-        if (outroValor == valorTem) {
-            System.out.println("Este valor se encontra cadastrado no vetor");
-        } else {
-            System.out.println("Este valor não se encontra cadastrado no vetor");
+        System.out.println("Digite um número para busca: ");
+        float numeroBusca = sc.nextFloat();
+        if (encontrarValor(numeroBusca, numeros)) {
+            System.out.println("Encontrou o valor!");
+        } else { 
+            System.out.println("Valor não encontrado");
         }
 
         sc.close();
     }
+
+    private void ler(float vetor[], Scanner sc) {
+        for (int i = 0; i < vetor.length; i++) {
+            System.out.print("Digite um número real [" + (i+1) + "]: ");
+            vetor[i] = sc.nextFloat();
+        }
+    }
+        
+    private boolean encontrarValor(float numero, float vetor[]) {
+        for (int i = 0; i < vetor.length; i++) {
+            if (vetor[i] == numero) {
+                return true;
+            }
+        }
+        return false;
+    }
+        
     public static void main(String[] args) {
         new Exe6Uni6();
     }
