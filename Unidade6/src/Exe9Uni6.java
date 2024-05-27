@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class Exe9Uni6 {
     public Exe9Uni6() {
 
+    
         Scanner sc = new Scanner(System.in);
 
         int sexo[] = new int[5];
@@ -13,18 +14,23 @@ public class Exe9Uni6 {
         "Digite uma nota para o cinema (zero até dez, valor inteiro):\n" +
         "Digite sua idade:");
 
+        ler(sexo, nota, idade, sc);
+        
+        sc.close();
+    }
 
+    private void ler(int s[], int n[], int id[], Scanner sc) {
         for (int i = 0; i < 5; i++) {
             System.out.println("Sexo ["+ (i+1) +"]:");
-            sexo[i] = sc.nextInt();
+            s[i] = sc.nextInt();
             System.out.println("Nota ["+ (i+1) +"]:");
-            nota[i] = sc.nextInt();
+            n[i] = sc.nextInt();
             System.out.println("Idade ["+ (i+1) +"]:");
-            idade[i] = sc.nextInt();
+            id[i] = sc.nextInt();
         }
+    }
 
-        sc.close();
-
+    private float calculos(int s[], int n[], int id[]) {
         float somaGeral = 0;
         float mediaGeral = 0;
         float quantidadeHomens = 0;
@@ -35,9 +41,9 @@ public class Exe9Uni6 {
         float notaMulherMaisJovem = 0;
 
         for (int i = 0; i < 5; i++) {
-            somaGeral += nota[i];
-            if (sexo[i] == 2) {
-                somaHomens += nota[i];
+            somaGeral += n[i];
+            if (s[i] == 2) {
+                somaHomens += n[i];
                 quantidadeHomens++;
             }
         }
@@ -48,24 +54,31 @@ public class Exe9Uni6 {
         System.out.println("Nota média atribuida pelos homens: " + mediaHomens);
 
         for (int i = 0; i < 5; i++) {
-            if (idade[i] < mulherMaisJovem && sexo[i] == 1) {
-                mulherMaisJovem = idade[i];
+            if (id[i] < mulherMaisJovem && s[i] == 1) {
+                mulherMaisJovem = id[i];
             }
-            if (mulherMaisJovem == idade[i] && sexo[i] == 1) {
-                notaMulherMaisJovem = nota[i];
+            if (mulherMaisJovem == id[i] && s[i] == 1) {
+                notaMulherMaisJovem = n[i];
             }
         }
         System.out.println("Nota atribuída pela mulher mais jovem: " + notaMulherMaisJovem);
 
         for (int i = 0; i < 5; i++) {
-            if (sexo[i] == 1 && idade[i] > 50 && nota[i] > mediaGeral) {
+            if (s[i] == 1 && id[i] > 50 && n[i] > mediaGeral) {
                 quantidadeMulheresMais50++;
             }
         }
 
         System.out.println(quantidadeMulheresMais50 + " mulher(es) com mais de 50 anos deram nota superior a média recebida pelo cinema");
 
+        return mediaGeral;
+        return mediaHomens;
+        return notaMulherMaisJovem;
+        return quantidadeMulheresMais50;
+
     }
+
+    
     public static void main(String[] args) {
         new Exe9Uni6();
     }
