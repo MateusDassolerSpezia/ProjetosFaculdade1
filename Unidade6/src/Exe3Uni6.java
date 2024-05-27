@@ -7,8 +7,8 @@ public class Exe3Uni6 {
         float vetor1[] = new float[12];
 
         ler(sc, vetor1);
-        float modificaoVetor[] = modificacao(vetor1);
-        escrever(modificaoVetor);
+        modificacao(vetor1);
+        escrever(vetor1);
 
 
         sc.close();
@@ -17,27 +17,26 @@ public class Exe3Uni6 {
     public void ler(Scanner sc, float vetor[]) {
         System.out.println("Popular vetor:");
         for (int i = 0; i < vetor.length; i++) {
-            System.out.print("Número [" + (i+1) + "]: ");
+            System.out.print("Número [" + (i) + "]: ");
             vetor[i] = sc.nextFloat();
         }
     }
         
 
-    public float[] modificacao(float vetor[]) {
-        float vetor2[] = new float[12];
-        for (int i = 0; i < vetor2.length; i++) {
-            if (vetor[i] % 2 == 0) {
-                vetor2[i] = vetor[i] + vetor[i] * 0.02f;
+    public void modificacao(float vetor[]) {
+        for (int i = 0; i < vetor.length; i++) {
+            if (i % 2 == 0) {
+                vetor[i] += vetor[i] * 0.02f;
             } else {
-                vetor2[i] = vetor[i] + vetor[i] * 0.05f;
+                vetor[i] += vetor[i] * 0.05f;
             }
         }
-        return vetor2;
+        
     }
 
-    public void escrever(float vetor2[]) {
-        for (int i = 0; i < vetor2.length; i++) {
-            System.out.println(vetor2[i]);
+    public void escrever(float vetor[]) {
+        for (int i = 0; i < vetor.length; i++) {
+            System.out.println(vetor[i]);
         }
     }
 

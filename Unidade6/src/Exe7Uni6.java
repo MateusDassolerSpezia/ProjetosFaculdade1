@@ -28,15 +28,15 @@ public class Exe7Uni6 {
         n = n - 1;
         for (int i = 0; i < vetor.length; i++) {
             while (indice < n) {
-                if (vetor[i] > vetor[(i+1)]) {
+                if (vetor[i] > vetor[i+1]) {
                     bolha = vetor[i];
-                    vetor[i] = vetor[(i+1)];
-                    vetor[(i+1)] = bolha;
+                    vetor[i] = vetor[i+1];
+                    vetor[i+1] = bolha;
                     indice = 0;
-                    //return bolha;
+                    return bolha;
                 } else {
                     indice = indice + 1;
-                    return indice;
+                    //return i;
                 }
             }
         }  
