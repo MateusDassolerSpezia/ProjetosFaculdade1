@@ -4,61 +4,43 @@ public class zExe9 {
     public zExe9() {
     Scanner sc = new Scanner(System.in);
 
-        int sexo[] = new int[5];
-        int nota[] = new int[5];
-        int idade[] = new int[5];
+    int notasHomens[] = new int[30];
+    int notasMulheres[] = new int[30];
+    int idadesMulheres[] = new int[30];
     
-        for (int i = 0; i < 5; i++) {
-            System.out.print("Digite o sexo (1 = feminino, 2 = masculino) ["+ (i+1) +"]: ");
-            sexo[i] = sc.nextInt();
-            System.out.print("Digite a nota (zero até dez, valor inteiro) ["+ (i+1) +"]: ");
-            nota[i] = sc.nextInt();
-            System.out.print("Digite a idade ["+ (i+1) +"]: ");
-            idade[i] = sc.nextInt();
-        }
+    inicializarVetores(notasMulheres, notasHomens, idadesMulheres);
+    ler(sc, notasMulheres, notasHomens, idadesMulheres);
     
-        sc.close();
+    sc.close();
+}
+
+private int quantidadeValores(int vetor[]) {
+    int quantidade = 0;
+    for (int i = 0; i < vetor.lenght; i++) {
+        if (vetor[i] != -1) {
+            
+        }
+    }
+}
+
+private inicializarVetores(int mulheres[], int homens[], int idadeMulheres[]) {
+    for (int i = 0; i < mulheres.length; i++) {
+
+    }
+}
+
+private void ler(Scanner sc, int mulheres[], int homens[], int idadeMulheres[]) {
+    int qtdHomens = 0;
+    int qtdMulheres = 0;
     
-        float somaNotaGeral = 0;
-        float mediaGeral = 0;
-        float quantidadeHomens = 0;
-        float somaNotaHomens = 0;
-        float mediaHomens = 0;
-        float quantidadeMulheresMais50 = 0;
-        float mulherMaisJovem = Float.MAX_VALUE;
-        float notaMulherMaisJovem = 0;
-
-        for (int i = 0; i < 5; i++) {
-            somaNotaGeral += nota[i];
-            if (sexo[i] == 2) {
-                somaNotaHomens += nota[i];
-                quantidadeHomens++;
-            }
-        }
-
-        mediaGeral = somaNotaGeral / 5;
-        System.out.println("Nota média recebida pelo cinema: " + mediaGeral);
-        mediaHomens = somaNotaHomens / quantidadeHomens;
-        System.out.println("Nota média atribuida pelos homens: " + mediaHomens);
-
-        for (int i = 0; i < 5; i++) {
-            if (idade[i] < mulherMaisJovem && sexo[i] == 1) {
-                mulherMaisJovem = idade[i];
-            }
-            if (mulherMaisJovem == idade[i] && sexo[i] == 1) {
-                notaMulherMaisJovem = nota[i];
-            }
-        }
-        System.out.println("Nota atribuída pela mulher mais jovem: " + notaMulherMaisJovem);
-
-        for (int i = 0; i < 5; i++) {
-            if (sexo[i] == 1 && idade[i] > 50 && nota[i] > mediaGeral) {
-                quantidadeMulheresMais50++;
-            }
-        }
-
-        System.out.println(quantidadeMulheresMais50 + " mulher(es) com mais de 50 anos deram nota superior a média recebida pelo cinema");
-
+    System.out.println("Iniciando preenchimento das 30 pessoas");
+    for (int i = 0; i < 5; i++) {
+        System.out.print("Sexo (1-F ou 2-M):");
+        int sexo = sc.nextInt();
+        System.out.print("Nota (0 a 10):");
+        int nota = sc.nextInt();
+        System.out.print("Idade:");
+    }
         
       }
 
@@ -67,5 +49,3 @@ public class zExe9 {
         new zExe9();
     }
 }
-
-

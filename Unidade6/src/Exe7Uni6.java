@@ -24,27 +24,22 @@ public class Exe7Uni6 {
 
     private int ordenar(int vetor[], int n) {
         int bolha = 0;
-        int indice = 0;
         n = n - 1;
-        for (int i = 0; i < vetor.length; i++) {
-            while (indice < n) {
+        for (int i = 0; i < n;) {
                 if (vetor[i] > vetor[i+1]) {
                     bolha = vetor[i];
                     vetor[i] = vetor[i+1];
                     vetor[i+1] = bolha;
-                    indice = 0;
-                    return bolha;
+                    i = 0;
                 } else {
-                    indice = indice + 1;
-                    //return i;
+                    i++;
                 }
             }
-        }  
         return bolha;
-        
     }
 
     private void escrever(int vetor[]) {
+        System.out.println("\nVetor ordenado:");
         for (int i = 0; i < vetor.length; i++) {
             System.out.println(vetor[i]);
         }
