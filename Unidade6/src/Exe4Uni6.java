@@ -20,9 +20,9 @@ public class Exe4Uni6 {
                 vetor1[i] = sc.nextInt();
             }
     
-            System.out.println("Popular vetor 2:");
+            System.out.println("\nPopular vetor 2:");
             for (int i = 0; i < vetor2.length; i++) {
-                System.out.println("Número " + (i+1) + ":");
+                System.out.print("Número " + (i+1) + ":");
                 vetor2[i] = sc.nextInt();
             }
             sc.close();

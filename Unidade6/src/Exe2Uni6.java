@@ -32,10 +32,11 @@ public class Exe2Uni6 {
     }
 
     private void escrever(float vetor[], float mediaA) {
-        System.out.println("A média dos valores é: " + mediaA);
+        System.out.println("\nA média dos valores é: " + mediaA);
+        System.out.println("Números maiores do que a média:");
         for (int i = 0; i < vetor.length; i++) {
             if (vetor[i] > mediaA) {
-                System.out.println("Números maiores do que a média: \n" + vetor[i]);
+                System.out.println(vetor[i]);
             }
         }
     }
