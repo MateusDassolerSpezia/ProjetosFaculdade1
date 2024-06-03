@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
-public class Exe10Uni6 {
-    public Exe10Uni6() {
+public class zExe10 {
+    public zExe10() {
         Scanner sc = new Scanner(System.in);
 
         int numeros[] = new int[50];
@@ -22,7 +22,7 @@ public class Exe10Uni6 {
                 case 2:
                 System.out.println("Digite um número para busca: ");
                 int numeroBusca = sc.nextInt();
-                if (pesquisarValor(numeroBusca, numeros)) {
+                if (pesquisarValor(numeroBusca, numeros, tamanho)) {
                     System.out.println("Está no vetor\n");
                 } else { 
                     System.out.println("Não está no vetor\n");
@@ -42,6 +42,7 @@ public class Exe10Uni6 {
                 case 7:
                 inverterValor(numeros);
                     break;
+                case 8: break;
                 default: System.out.println("Opção inválida");
             }
         } while (opcao != 8);
@@ -56,12 +57,12 @@ public class Exe10Uni6 {
             tamanho++;
             System.out.println("Valor incluído no vetor\n");
         } else {
-            System.out.println("\nVetor cheio, número não pode ser incluído no vetor\n");
+            System.out.println("\nVetor está cheio, número não pode ser incluído\n");
         }
         return tamanho;
     }
 
-    private boolean pesquisarValor(int numero, int vetor[]) {
+    private boolean pesquisarValor(int numero, int vetor[], int tamanho) {
         for (int i = 0; i < vetor.length; i++) {
             if (vetor[i] == numero) {
                 return true;
@@ -144,8 +145,7 @@ public class Exe10Uni6 {
     }
         System.out.println();
     }
-
     public static void main(String[] args) {
-        new Exe10Uni6();
+        new zExe10();
     }
 }

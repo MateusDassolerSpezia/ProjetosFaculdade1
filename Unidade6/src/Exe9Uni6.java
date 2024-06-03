@@ -22,7 +22,7 @@ public class Exe9Uni6 {
                 try {
                     System.out.print("Digite o sexo (1 = feminino, 2 = masculino) ["+ (i+1) +"]: ");
                     sexo[i] = sc.nextInt();
-                } catch (InputMismatchException e) {
+                } catch (InputMismatchException e) {  // Tratamento de dado
                     sc = new Scanner(System.in);
                     System.out.println("Informação inválida, deve ser 1 ou 2");
                 }
@@ -31,7 +31,7 @@ public class Exe9Uni6 {
                 try {
                     System.out.print("Digite a nota (zero até dez, valor inteiro) ["+ (i+1) +"]: ");
                     nota[i] = sc.nextInt();
-                } catch (InputMismatchException e) {
+                } catch (InputMismatchException e) {  // Tratamento de dado
                     sc = new Scanner(System.in);
                 }
             } while (nota[i] < 0 || nota[i] > 10);
@@ -39,7 +39,7 @@ public class Exe9Uni6 {
                 try {
                     System.out.print("Digite a idade ["+ (i+1) +"]: ");
                     idade[i] = sc.nextInt();
-                } catch (InputMismatchException e) {
+                } catch (InputMismatchException e) {  // Tratamento de dado
                     sc = new Scanner(System.in);
                 }
             } while (idade[i] <= 0);
