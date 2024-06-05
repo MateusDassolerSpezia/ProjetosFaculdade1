@@ -3,147 +3,128 @@ import java.util.Scanner;
 public class zExe10 {
     public zExe10() {
         Scanner sc = new Scanner(System.in);
+        int vetor[] = new int[50];
+        int quantidade = 0;
+        int menu = 0;
 
-        int numeros[] = new int[50];
-        
-        int opcao = 0;
-        int tamanho = 0;
-        //int novoValor = 0;
-    
         do {
-            System.out.println("Escolha uma opção:\n1 - Incluir valor\n2 - Pesquisar valor\n3 - Alterar valor\n4 - Excluir valor\n5 - Mostrar valores\n6 - Ordenar valores (ordem crescente)\n7 - Inverter valores\n8 - Sair do sistema");
-            System.out.print("Opção escolhida: ");
-            opcao = sc.nextInt();
 
-            switch (opcao) {
+            System.out.println("Escolha uma opção:");
+            System.out.println("1 - Inserir\n2 - Pesquisar\n3 - Alterar");
+            System.out.println("4 - Excluir\n5 - Mostrar\n6 - Ordenar");
+            System.out.println("7 - Inverter\n8 - Sair");
+
+            menu = sc.nextInt();
+
+            switch (menu) {
                 case 1:
-                tamanho = incluirValor(numeros, sc, tamanho);
+                    System.out.print("Digite um número para inserir: ");
+                    int numero = sc.nextInt();
+                    quantidade = inserir(vetor, numero, quantidade);
                     break;
                 case 2:
-                System.out.println("Digite um número para busca: ");
-                int numeroBusca = sc.nextInt();
-                if (pesquisarValor(numeroBusca, numeros, tamanho)) {
-                    System.out.println("Está no vetor\n");
-                } else { 
-                    System.out.println("Não está no vetor\n");
-                }   break;
+                    System.out.print("Digite um número para pesquisar: ");
+                    numero = sc.nextInt();
+                    if (pesquisar(vetor, numero, quantidade) != -1) {
+                        System.out.println("Número encontrado");
+                    } else {
+                        System.out.println("Número não existe no vetor");
+                    }
+                    break;
                 case 3:
-                alterarValor(numeros, sc); 
+                    System.out.print("Digite um número para alterar: ");
+                    numero = sc.nextInt();
+                    System.out.print("Digite o novo número: ");
+                    int novoNumero = sc.nextInt();
+                    alterar(vetor, numero, novoNumero, quantidade);
                     break;
                 case 4:
-                excluirValor(numeros, sc);
+                    System.out.print("Digite um número para excluir: ");
+                    numero = sc.nextInt();
+                    int tamanho = excluir(vetor, numero, quantidade);
+                    if (tamanho != -1) {
+                        quantidade = tamanho;
+                        System.out.println("Número excluído com sucesso");
+                    } else {
+                        System.out.println("Número inexistente, não foi excluído");
+                    }
                     break;
                 case 5:
-                mostrarValor(numeros);
+                    mostrar(vetor, quantidade);
                     break;
-                case 6:
-                ordenarValor(numeros);
+                case 6: // Bolha
                     break;
-                case 7:
-                inverterValor(numeros);
+                case 7: // Inverter
+                    inverter(vetor, quantidade);
                     break;
-                case 8: break;
-                default: System.out.println("Opção inválida");
+                case 8:
+                    break;
+                default:
+                    System.out.println("Opção inválida");
+                    break;
             }
-        } while (opcao != 8);
+        } while (menu != 8);
 
         sc.close();
     }
-
-    private int incluirValor(int vetor[], Scanner sc, int tamanho) {
-        if (tamanho < vetor.length) {
-            System.out.println("\nInclua um valor no fim do vetor:");
-            vetor[tamanho] = sc.nextInt();
-            tamanho++;
-            System.out.println("Valor incluído no vetor\n");
-        } else {
-            System.out.println("\nVetor está cheio, número não pode ser incluído\n");
-        }
-        return tamanho;
-    }
-
-    private boolean pesquisarValor(int numero, int vetor[], int tamanho) {
-        for (int i = 0; i < vetor.length; i++) {
-            if (vetor[i] == numero) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    private void alterarValor(int vetor[], Scanner sc) {
-        System.out.println("\nDigite um valor para ser alterado:");
-        int valor = sc.nextInt();
-        for (int i = 0; i < vetor.length;) {
-            if (valor == vetor[i]) {
-                System.out.println("Digite um novo valor:");
-                vetor[i] = sc.nextInt();
-            } else {
-                i++;
-            }  
-        } 
-    }
-
-    private void excluirValor(int vetor[], Scanner sc) {
-        System.out.println("\nDigite um valor para ser excluído:");
-        int valor = sc.nextInt();
-        for (int i = 0; i < vetor.length;) {
-            if (valor == vetor[i]) {
-                vetor[i] = 0;
-                System.out.println("Valor excluído do vetor\n");
-            } else {
-                i++;
-            }
-        }
-    }
-
-    private void mostrarValor(int vetor[]) {
-        System.out.println("\nValores no vetor:");
-        for (int i = 0; i < vetor.length; i++) {
-                System.out.println(vetor[i]);
-        }
-        System.out.println();
-    }
-
-    private int ordenarValor(int vetor[]) {
-        int bolha = 0;
-        for (int i = 0; i < vetor.length - 1;) {
-            if (vetor[i] > vetor[i+1]) {
-                bolha = vetor[i];
-                vetor[i] = vetor[i+1];
-                vetor[i+1] = bolha;
-                i = 0;
-            } else {
-                i++;
-            }
-        }
-        System.out.println("\nValores ordenados:");
-        for (int i = 0; i < vetor.length; i++) {
-            if (vetor[i] != 0) {
-                System.out.println(vetor[i]);
-            }
-        }
-        System.out.println();
-        return bolha;
-
-    }
-
-    private void inverterValor(int vetor[]) {
+    private void inverter(int vet[], int tamanho) {
         int temp = 0;
-        for (int i = 0; i < vetor.length; i++) {
-            for (int x = 0; x < i; x++) {
-                temp = vetor[i];
-                vetor[i] = vetor[x];
-                vetor[x] = temp;
-            }
+        for (int i = 0; i < tamanho; i++) {
+          for (int x = 0; x < i; x++) {
+            temp = vet[i];
+            vet[i] = vet[x];
+            vet[x] = temp;
+          }
         }
-        System.out.println("\nValores invertidos");
-        for (int i = 0; i < vetor.length; i++) {
-            if (vetor[i] != 0) {
+      }
+
+    private void mostrar(int[] vetor, int tamanho) {
+        for (int i = 0; i < tamanho; i++) {
             System.out.println(vetor[i]);
         }
     }
-        System.out.println();
+
+    private int excluir(int[] vetor, int numero, int tamanho) {
+        int indice = pesquisar(vetor, numero, tamanho);
+        if (indice != -1) {
+            for (int i = indice; i < tamanho - 1; i++) {
+                vetor[i] = vetor[i + 1];
+            }
+            tamanho--;
+            return tamanho;
+        } else {
+            return -1;
+        }
+    }
+
+    private void alterar(int[] vetor, int numero, int novoNumero, int tamanho) {
+        int indice = pesquisar(vetor, numero, tamanho);
+        if (indice != -1) {
+            vetor[indice] = novoNumero;
+            System.out.println("Número foi alterado");
+        } else {
+            System.out.println("Não foi possível alterar o número, pois não existe");
+        }
+    }
+
+    private int pesquisar(int[] vetor, int numero, int tamanho) {
+        for (int i = 0; i < tamanho; i++) {
+            if (vetor[i] == numero) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    private int inserir(int[] vetor, int numero, int tamanho) {
+        if (tamanho < vetor.length) {
+            vetor[tamanho] = numero;
+            tamanho++;
+            System.out.println("Dados inseridos com sucesso");
+        } else {
+            System.out.println("Vetor está cheio. Não é possível inserir");
+        }
+        return tamanho;
     }
     public static void main(String[] args) {
         new zExe10();
