@@ -9,6 +9,7 @@ public class Prova2Questao {
         
         int quantidade = 0;
         int pesoTotal = 0;
+        int pesoExcluido = 0;
         
         char opcao = 0;
 
@@ -36,18 +37,28 @@ public class Prova2Questao {
                     itemMaisPesado(pesos, quantidade, tamanho);
                         break;
                 case 'D':
-                ordenar(tamanho, pesos);
+                    System.out.println("Itens ordenados:");
+                    ordenar(tamanho, pesos, quantidade);
+                        break;
                 case 'E':
                     System.out.print("Digite um item para excluir: ");
                     item = sc.next();
-                    int posicao = excluir(tamanho, pesos, quantidade, item);
+                    int indice = pesquisar(tamanho, pesos, item, quantidade);
+                    for (int i = indice; i < indice + 1; i++) {
+                        pesoExcluido = pesos[i];
+                    }
+                    pesoTotal -= pesoExcluido;
+                    int posicao = excluir(tamanho, pesos, quantidade, item, pesoExcluido, pesoTotal, indice);
                     if (posicao != -1) {
                         quantidade = posicao;
-                        System.out.println("Item excluído com sucesso");
+                        System.out.println("Item excluído com sucesso\n");
                     } else {
-                        System.out.println("Item inexistente, não foi excluído");
+                        System.out.println("Item inexistente, não foi excluído\n");
                     }
+                        break;
                 case 'F':
+                    System.out.println("Saiu");
+                        break;
             }
         } while (opcao != 'F');
 
@@ -94,41 +105,56 @@ public class Prova2Questao {
         int maisPesado = Integer.MIN_VALUE;
         for (int i = 0; i < quantidade; i++) {
             if (pesos[i] > maisPesado) { 
-               itemMaisPesado = tamanho[i];
+                maisPesado = pesos[i];
+                itemMaisPesado = tamanho[i];
         }
     }
-    System.out.println("O item mais pesado é o " + itemMaisPesado);
+        System.out.println("O item mais pesado é o(a) " + itemMaisPesado);
+        
     }
 
-    private void ordenar(String tamanho[], int pesos[]) {
+    private void ordenar(String tamanho[], int pesos[], int quantidade) {
+        String boulha = null;
         int bolha = 0;
-        for (int i = 0; i < pesos.length - 1;) {
+        for (int i = 0; i < quantidade - 1;) {
             if (pesos[i] > pesos[i+1]) {
                 bolha = pesos[i];
                 pesos[i] = pesos[i+1];
                 pesos[i+1] = bolha;
+
+                boulha = tamanho[i];
+                tamanho[i] = tamanho[i+1];
+                tamanho[i+1] = boulha;
                 i = 0;
             } else {
                 i++;
             }
+            
         }
+        for (int i = 0; i < quantidade; i++) {
+            System.out.println(tamanho[i] + " | " + pesos[i] + " Kg");
+        }
+        System.out.println();
     }
 
-    private int pesquisar(String tamanho[], String item, int quantidade) {
+    private int pesquisar(String tamanho[], int pesos[], String item, int quantidade) {
         for (int i = 0; i < quantidade; i++) {
-            if (tamanho[i] == item) {
+            if (tamanho[i].trim().equals(item)) {
                 return i;
             }
         }
         return -1;
     }
 
-    private int excluir(String tamanho[], int pesos[], int quantidade, String item) {
-        int indice = pesquisar(tamanho, item, quantidade);
+    private int excluir(String tamanho[], int pesos[], int quantidade, String item, int pesoExcluido, int pesoTotal, int indice) {
+        //int indice = pesquisar(tamanho, pesos, item, quantidade);
         if (indice != -1) {
             for (int i = indice; i < quantidade - 1; i++) {
                 tamanho[i] = tamanho[i + 1];
+                //pesoExcluido = pesos[i];
+                pesos[i] = pesos[i + 1];
             }
+            //pesoTotal -= pesoExcluido;
             quantidade--;
             return quantidade;
         } else {
