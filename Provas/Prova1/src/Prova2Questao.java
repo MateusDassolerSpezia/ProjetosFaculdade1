@@ -94,7 +94,7 @@ public class Prova2Questao {
             pesos[x] = tempi;
           }
         }
-        for (int i = 0; i < quantidade; i++) {
+        for (int i = 0; i < pesos.length; i++) {
             System.out.println(tamanho[i] + " | " + pesos[i] + " Kg");
         }
         System.out.println();
@@ -131,7 +131,7 @@ public class Prova2Questao {
             }
             
         }
-        for (int i = 0; i < quantidade; i++) {
+        for (int i = 0; i < pesos.length; i++) {
             System.out.println(tamanho[i] + " | " + pesos[i] + " Kg");
         }
         System.out.println();
