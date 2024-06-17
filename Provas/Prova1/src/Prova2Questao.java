@@ -44,11 +44,13 @@ public class Prova2Questao {
                     System.out.print("Digite um item para excluir: ");
                     item = sc.next();
                     int indice = pesquisar(tamanho, pesos, item, quantidade);
+                    if (indice != -1) {
                     for (int i = indice; i < indice + 1; i++) {
                         pesoExcluido = pesos[i];
                     }
                     pesoTotal -= pesoExcluido;
-                    int posicao = excluir(tamanho, pesos, quantidade, item, pesoExcluido, pesoTotal, indice);
+                    }   
+                    int posicao = excluir(tamanho, pesos, quantidade, item, indice);
                     if (posicao != -1) {
                         quantidade = posicao;
                         System.out.println("Item excluído com sucesso\n");
@@ -146,15 +148,13 @@ public class Prova2Questao {
         return -1;
     }
 
-    private int excluir(String tamanho[], int pesos[], int quantidade, String item, int pesoExcluido, int pesoTotal, int indice) {
+    private int excluir(String tamanho[], int pesos[], int quantidade, String item, int indice) {
         //int indice = pesquisar(tamanho, pesos, item, quantidade);
         if (indice != -1) {
-            for (int i = indice; i < quantidade - 1; i++) {
+            for (int i = indice; i < pesos.length - 1; i++) {
                 tamanho[i] = tamanho[i + 1];
-                //pesoExcluido = pesos[i];
                 pesos[i] = pesos[i + 1];
             }
-            //pesoTotal -= pesoExcluido;
             quantidade--;
             return quantidade;
         } else {
