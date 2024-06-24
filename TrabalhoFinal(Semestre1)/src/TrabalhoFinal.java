@@ -2,74 +2,164 @@ import java.util.Scanner;
 
 public class TrabalhoFinal {
     public TrabalhoFinal() {
-        Scanner sc = new Scanner(System.in);
 
-        char agua[][] = new char[8][8];
-        char navios[][] = new char[8][8];
-        System.out.println("0 1 2 3 4 5 6 7");
-        
-        for (int i = 0; i < agua.length; i++) { //Linhas
-            for (int j = 0; j < agua[i].length; j++) { //Colunas
-                agua[i][j] = '~';
-                System.out.print(agua[i][j] + " ");
+        Scanner s = new Scanner(System.in);
+        char[][] agua = new char[8][8];
+        char[][] sorteioNavios = new char[8][8];
+        int[] sorteioLinhas = new int[10];
+        int[] sorteioColunas = new int[10];
+        int contadorJogadas = 0;
+        int contadorAcertos = 0;
+
+        inicializarTabuleiro(agua);
+
+        sortear(sorteioLinhas, sorteioColunas, sorteioNavios);
+
+        for (int linha = 0; linha < sorteioNavios.length; linha++) { // print da matriz Navios (TIRAR DEPOIS)
+            for (int coluna = 0; coluna < sorteioNavios.length; coluna++) {
+
+                System.out.print(sorteioNavios[linha][coluna] + " ");
             }
             System.out.println("");
         }
+        System.out.println(""); // print da matriz Navios (TIRAR DEPOIS)
 
-        System.out.println();
+        int linha = 0;
+        int coluna = 0;
+        while (contadorJogadas < 30 && contadorAcertos < 10) {
+            do {
+                System.out.println("Digite as coordenadas de ataque:");
+                System.out.print("Linha: ");
+                linha = s.nextInt();
+                while (linha < 0 || linha > 7) {
+                    System.out.println("\nVocê atacou em uma linha Inválida");
+                    System.out.print("Linha: ");
+                    linha = s.nextInt();
+                }
+                System.out.print("Coluna: ");
+                coluna = s.nextInt();
+                while (coluna < 0 || coluna > 7) {
+                    System.out.println("\nVocê atacou em uma coluna Inválida!");
+                    System.out.print("Coluna: ");
+                    coluna = s.nextInt();
+                }
+                if (agua[linha][coluna] == 'N' || agua[linha][coluna] == 'O') {
+                    System.out.println("\nVocê atacou no mesmo lugar, digite outra coordenada!");
+                }
+            } while (agua[linha][coluna] == 'N' || agua[linha][coluna] == 'O');
 
-        for (int i = 0; i < navios.length; i++) { //Linhas
-            for (int j = 0; j < navios[i].length; j++) { //Colunas
-                navios[i][j] = '~';
-                navios[4][4] = 'N';
-                System.out.print(navios[i][j] + " ");
+            interacaoJogador(agua, sorteioNavios, contadorJogadas, contadorAcertos, linha, coluna);
+
+            if (feedbackJogador(agua, linha, coluna)) {
+                contadorAcertos++;
+            }
+            contadorJogadas++;
+
+            for (int i = 0; i < agua.length; i++) {
+                for (int j = 0; j < agua.length; j++) {
+
+                    System.out.print(agua[i][j] + " ");
+                }
+                System.out.println("");
             }
             System.out.println("");
+
         }
 
-        //navios[4][4] = 'N';
+        condicaoParada(contadorAcertos, contadorJogadas, sorteioNavios);
 
-        interacaoJogador(sc, agua, navios);
-
-        for (int i = 0; i < agua.length; i++) { //Linhas
-            for (int j = 0; j < agua[i].length; j++) { //Colunas
-                System.out.print(agua[i][j] + " ");
-            }
-            System.out.println("");
-        }
-
-        sc.close();
+        s.close();
     }
 
-    private void inicializacaoTabuleiro(char agua[]) {
-        
-}
+    // Inicializa a matriz preenchendo com '~'
+    // colocar retorno (oq é)
+    // colocar tudo que vai utilizar nos parametros
+    private void inicializarTabuleiro(char[][] agua) { // Preenche a matriz "agua" com '~'
+        for (int linha = 0; linha < agua.length; linha++) {
+            for (int coluna = 0; coluna < agua.length; coluna++) {
 
-    private void posicionamnetoNavios() {
+                agua[linha][coluna] = '~';
+                System.out.print(agua[linha][coluna] + " ");
+            }
+            System.out.println("");
+        }
+        System.out.println("");
+    }
 
-}
+    // Sorteia a posição dos 10 navios na matriz
+    private char[][] sortear(int[] sorteioLinhas, int[] sorteioColunas, char[][] sorteioNavios) { //
+        for (int linha = 0; linha < sorteioNavios.length; linha++) { // popular (Matriz Navios)
+            for (int coluna = 0; coluna < sorteioNavios.length; coluna++) {
 
-    private void interacaoJogador(Scanner sc, char agua[][], char navios[][]) {
-        System.out.println("Digite as coordenadas de ataque:");
-        System.out.print("Linha: ");
-        int linha = sc.nextInt();
-        System.out.print("Coluna: ");
-        int coluna = sc.nextInt();
+                sorteioNavios[linha][coluna] = '~';
+            }
+        }
+        for (int i = 0; i < 10; i++) {
+            sorteioLinhas[i] = (int) ((Math.random() * 7) - 0);
+            sorteioColunas[i] = (int) ((Math.random() * 7) - 0);
+            for (int j = 0; j < 10; j++) {
+                if (j != i) {
+                    if (sorteioLinhas[i] == sorteioLinhas[j] && sorteioColunas[i] == sorteioColunas[j]) {
+                        i = i - 1;
+                    }
+                } else {
+                    sorteioNavios[sorteioLinhas[i]][sorteioColunas[i]] = 'N';
 
-        if (navios[linha][coluna] == 'N') {
+                }
+            }
+        }
+        return sorteioNavios;
+    }
+
+    private char[][] interacaoJogador(char agua[][], char sorteioNavios[][], int contadorJogadas, int contadorAcertos,
+            int linha, int coluna) { //
+
+        if (sorteioNavios[linha][coluna] == 'N') {
             agua[linha][coluna] = 'X';
+            contadorAcertos++;
         } else {
             agua[linha][coluna] = 'O';
+            contadorJogadas++;
         }
-}
+        return agua;
+    }
 
-    private void feedbackAtaque() {
+    private boolean feedbackJogador(char[][] agua, int linha, int coluna) { //
 
-}
+        if (agua[linha][coluna] == 'X') {
+            System.out.println("Você acertou um Barco!");
+            return true;
+        } else {
+            System.out.println("Você errou!");
+        }
+        return false;
+    }
 
-    private void condicaoVitoria() {
-    
-}
+    private void condicaoParada(int contadorAcertos, int contadorJogadas, char sorteioNavios[][]) { //
+        if (contadorAcertos == 10) {
+            System.out.println("Você venceu!");
+            System.out.println("Posição dos navios:");
+            for (int linha = 0; linha < sorteioNavios.length; linha++) {
+                for (int coluna = 0; coluna < sorteioNavios.length; coluna++) {
+
+                    System.out.print(sorteioNavios[linha][coluna] + " ");
+                }
+                System.out.println("");
+            }
+            System.out.println("");
+        } else if (contadorJogadas == 30) {
+            System.out.println("Você foi derrotado!");
+            System.out.println("Posição dos navios:");
+            for (int linha = 0; linha < sorteioNavios.length; linha++) {
+                for (int coluna = 0; coluna < sorteioNavios.length; coluna++) {
+
+                    System.out.print(sorteioNavios[linha][coluna] + " ");
+                }
+                System.out.println("");
+            }
+            System.out.println("");
+        }
+    }
 
     public static void main(String[] args) {
         new TrabalhoFinal();
